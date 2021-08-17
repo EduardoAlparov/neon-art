@@ -583,7 +583,9 @@
 .page-header__language {
     color: rgba(white, 0.5);
     margin-right: 6rem;
-
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 130%;
     @include breakpoint(mobile) {
         display: none;
     }

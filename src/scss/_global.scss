@@ -24,6 +24,7 @@
 html {
     box-sizing: border-box;
     font-size: 10px;
+   
     -webkit-text-size-adjust: 100%;
     font-size: clamp(5px, 0.56vw, 18px);
     @include noHighlight();
@@ -48,6 +49,8 @@ body {
     color: var(--text-color);
     font-family: var(--montserrat);
     font-weight: 500;
+    min-height: 1vw;
+    -webkit-marquee-increment: 0vw;
 }
 
 main {
