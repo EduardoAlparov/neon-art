@@ -1,0 +1,213 @@
+.press-center {
+    background: #f5f5f7;
+    color: var(--text-color);
+    padding-top: 9rem;
+    padding-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.press-center__top-row {
+    padding-left: 19rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+    @include breakpoint(mobile) {
+        padding-left: 0;
+        margin-bottom: 4.5rem;
+    }
+}
+
+.press-center__heading {
+    width: 50%;
+    flex-grow: 1;
+}
+
+.press-center__slider-arrows {
+    margin-left: 4rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
+}
+
+.press-center__slider {
+    margin-bottom: 9rem;
+    padding-left: 9rem;
+    @include breakpoint(mobile) {
+        padding-left: 0;
+        margin-bottom: 4.5rem;
+    }
+
+    .swiper-container {
+        overflow: visible;
+    }
+
+    .swiper-slide {
+        width: 55.8rem;
+        height: auto;
+
+        @include breakpoint(mobile) {
+            width: 31.5rem;
+        }
+    }
+}
+
+.press-center__slider-card {
+    .no-touch &:hover {
+        .press-center__slider-card-image-container {
+            &::before {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.press-center__slider-card-image-container {
+    position: relative;
+    margin-bottom: 2.2rem;
+    padding-bottom: 65%;
+    @include breakpoint(mobile) {
+        margin-bottom: 1.8rem;
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity .2s;
+        z-index: 10;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(28, 28, 36, 0.2), rgba(28, 28, 36, 0.2));
+    }
+}
+
+.press-center__slider-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.press-center__slider-card-content {
+    display: grid;
+    grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+    grid-column-gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.press-center__slider-card-date {
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 130%;
+    text-transform: lowercase;
+    color: rgba(#1c1c24, 0.4);
+}
+
+.press-center__slider-card-title {
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 140%;
+    margin-top: -0.4rem;
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 140%;
+        margin-top: -0.2rem;
+    }
+}
+
+
+
+
+.press-center__show-all {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 120%;
+    margin-left: 19rem;
+    text-transform: lowercase;
+
+   
+    transition: transform 0.4s ease 0.5s;
+    color: #AFAFAF;
+
+    &:link,
+    &:visited {
+        color: #AFAFAF;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 120%;
+        margin-left: 0;
+    }
+
+   
+
+    svg {
+        width: 3.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        fill: currentColor;
+        margin-left: 2.5rem;
+
+        @include breakpoint(mobile) {
+            width: 3.6rem;
+            height: 1.8rem;
+            margin-left: 2rem;
+        }
+    }
+
+    .no-touch &:hover {
+        .press-center__show-all-text-inner {
+            transform: translateY(-100%);
+        }
+        .press-center__show-all-text {
+            &::after {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
+
+.press-center__show-all-text {
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: attr(data-text);
+        transition: transform 0.3s;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.press-center__show-all-text-inner {
+    transition: transform 0.3s;
+}
