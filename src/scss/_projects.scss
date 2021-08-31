@@ -217,7 +217,7 @@
     bottom: 6rem;
     z-index: 50;
     transition: color 0.2s, transform 0.3s;
-    display: none;
+ 
     @include breakpoint(mobile) {
         position: static;
         max-width: none;
@@ -226,6 +226,7 @@
         margin-top: 2rem;
         color: var(--text-color);
         font-weight: 400;
+        display: none;
     }
 }
 

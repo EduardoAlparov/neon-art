@@ -169,7 +169,7 @@
         display: grid;
         grid-template-columns: repeat(4, minmax(0, 1fr));
         grid-column-gap: 6rem;
-        margin-top: 21rem;
+        margin-top: auto;
 
         opacity: 0;
         visibility: hidden;
