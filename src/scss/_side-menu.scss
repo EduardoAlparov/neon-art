@@ -11,6 +11,10 @@
 
     opacity: 0;
     transition: opacity 0.2s;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
     
 
     .animatable & {

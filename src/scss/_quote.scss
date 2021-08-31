@@ -1,7 +1,6 @@
 .quote {
     background: #292933;
     color: white;
-    
 }
 
 .quote__content {
@@ -12,11 +11,27 @@
     grid-template-columns: minmax(0, 42rem) minmax(0, 1fr);
     grid-column-gap: 13rem;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, auto) minmax(0, 1fr);
+        grid-template-areas: 'text text' 'photo author';
+        grid-gap: 1.5rem;
+        padding: 3rem 0;
+    }
 }
 
 .quote__photo-container {
     position: relative;
     width: 100%;
+
+    @include breakpoint(mobile) {
+        grid-area: photo;
+        width: 6rem;
+        border-radius: 50%;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform: translateZ(0);
+    }
     &::before {
         content: '';
         display: block;
@@ -36,6 +51,10 @@
 .quote__text-content {
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(mobile) {
+        display: contents;
+    }
 }
 
 .quote__signature {
@@ -47,6 +66,10 @@
     top: 100%;
     transform: translateY(-50%);
     margin-left: 3rem;
+
+    @include breakpoint(mobile) {
+        display: none;
+    }
 }
 
 .quote__text {
@@ -56,6 +79,15 @@
     margin-bottom: 6rem;
     position: relative;
     max-width: 64rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        line-height: 160%;
+        font-weight: 400;
+        max-width: none;
+        margin: 0;
+        grid-area: text;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -75,9 +107,12 @@
     position: relative;
     z-index: 1;
     align-self: flex-start;
+
+    @include breakpoint(mobile) {
+        align-self: center;
+        grid-area: author;
+    }
 }
-
-
 
 .quote__author-role {
     font-weight: 500;
@@ -86,10 +121,19 @@
     text-transform: lowercase;
     margin-bottom: 0.7rem;
     color: rgba(white, 0.4);
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+    }
 }
 
 .quote__author-name {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 130%;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
 }

@@ -31,7 +31,7 @@
     margin-bottom: 6rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
     }
     .swiper-container {
         overflow: visible;
@@ -43,11 +43,19 @@
             grid-template-columns: minmax(0, 1fr);
             grid-gap: 4rem;
         }
+
+        @include breakpoint(mobile) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     .swiper-slide {
         @include breakpoint(mobile) {
-            width: 31.5rem;
+            margin-bottom: 1.2rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
 }
@@ -88,8 +96,7 @@
             .projects__slider-card-more {
                 opacity: 1;
                 visibility: inherit;
-                transition: opacity .3s ease .2s, visibility .3s ease .2s;
-                
+                transition: opacity 0.3s ease 0.2s, visibility 0.3s ease 0.2s;
             }
         }
     }
@@ -116,12 +123,8 @@
     @include breakpoint(mobile) {
         padding: 0;
         min-height: 21.5rem;
-        padding: 1.4rem 2rem;
-
-        @supports (aspect-ratio: 16 / 9) {
-            aspect-ratio: 16 / 10;
-            min-height: auto;
-        }
+        padding: 1.4rem var(--content-padding);
+        margin: 0 calc(-1 * var(--content-padding));
     }
 }
 
@@ -147,12 +150,18 @@
         background: linear-gradient(0deg, rgba(41, 41, 51, 0.5), rgba(41, 41, 51, 0.5)),
             linear-gradient(315.37deg, rgba(0, 0, 0, 0.31) 38.85%, rgba(0, 0, 0, 0) 53.61%);
         transition: opacity 0.4s;
+
         opacity: 0;
     }
 
     @include breakpoint(mobile) {
         left: 0;
         right: 0;
+
+        &::after {
+            opacity: 1;
+            background: linear-gradient(0deg, rgba(41, 41, 51, 0.5), rgba(41, 41, 51, 0.5));
+        }
     }
 }
 
@@ -207,8 +216,8 @@
     right: var(--sidebar-width, 0);
     bottom: 6rem;
     z-index: 50;
-    transition: color 0.2s, transform .3s;
-
+    transition: color 0.2s, transform 0.3s;
+    display: none;
     @include breakpoint(mobile) {
         position: static;
         max-width: none;
@@ -227,23 +236,28 @@
     }
 }
 
-
-
 .projects__slider-card-more {
     font-weight: 500;
     font-size: 1.6rem;
     line-height: 130%;
     text-transform: lowercase;
     color: white;
-    transition: opacity .3s, transform .3s, visibility 0s linear .3s;
-   
+    transition: opacity 0.3s, transform 0.3s, visibility 0s linear 0.3s;
+
     opacity: 0;
     visibility: hidden;
     position: absolute;
     left: var(--sidebar-width, 0);
-    
+
     bottom: 6rem;
     z-index: 50;
+
+    @include breakpoint(mobile) {
+        opacity: 1;
+        visibility: inherit;
+        bottom: 2rem;
+        left: 0;
+    }
     &::before {
         content: '';
         position: absolute;

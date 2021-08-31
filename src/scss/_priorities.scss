@@ -2,6 +2,10 @@
    
     padding-bottom: 9rem;
     padding-top: 9rem;
+
+    @include breakpoint(mobile) {
+        padding: 5rem 0;
+    }
 }
 
 .priorities__content {
@@ -10,6 +14,11 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column-gap: 10rem;
     align-items: center;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
 }
 
 .priorities__text {
@@ -17,6 +26,11 @@
     font-size: 2.8rem;
     line-height: 150%;
     text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 2.4rem;
+        line-height: 140%;
+    }
 }
 
 .priorities__video-block {
@@ -32,6 +46,10 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     max-width: 55rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+    }
 
     .no-touch &:hover {
         .priorities__video-image {
@@ -63,6 +81,11 @@
         height: 4.5rem;
         fill: white;
         z-index: 10;
+
+        @include breakpoint(mobile) {
+            width: 3.2rem;
+            height: 3.2rem;
+        }
     }
 }
 
@@ -88,4 +111,9 @@
     flex-shrink: 0;
     white-space: nowrap;
     color: rgba(black, 0.4);
+
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        left: 1rem;
+    }
 }

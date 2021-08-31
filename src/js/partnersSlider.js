@@ -7,7 +7,8 @@ export default function partnersSlider() {
 
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
-        new Swiper(container, {
+
+        let options = {
             watchOverflow: true,
             slidesPerView: 6,
             spaceBetween: 10,
@@ -18,6 +19,15 @@ export default function partnersSlider() {
                 nextEl: element.querySelector('.slider-arrows__btn--next'),
                 prevEl: element.querySelector('.slider-arrows__btn--prev')
             }
-        });
+        };
+
+        if (window.matchMedia('(max-width: 640px)').matches) {
+            options = {
+                ...options,
+                slidesPerView: 3,
+                slidesPerColumn: 2
+            };
+        }
+        new Swiper(container, options);
     });
 }

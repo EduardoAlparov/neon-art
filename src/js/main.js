@@ -15,12 +15,15 @@ import datepicker from './datepicker';
 import menu from './menu';
 import menuSlider from './menuSlider';
 import numbersSlider from './numbersSlider';
-import projectsSlider from './projectsSlider';
+// import projectsSlider from './projectsSlider';
 import slidingText from './numbers';
 import mobileMenuAccordions from './mobileMenuAccordions';
 import awardsSlider from './awardsSlider';
 import partnersSlider from './partnersSlider';
 import teamSlider from './teamSlider';
+import fancybox from './fancybox';
+import companyHistorySlider from './companyHistorySlider';
+
 import './midnight';
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -40,13 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
     menu();
     menuSlider();
     numbersSlider();
-    projectsSlider();
+    // projectsSlider();
     mobileMenuAccordions();
     awardsSlider();
     partnersSlider();
     teamSlider();
-
-   
+    fancybox();
+    companyHistorySlider();
 });
 
 window.addEventListener('load', function() {
@@ -55,7 +58,7 @@ window.addEventListener('load', function() {
     slidingText();
 
     const sideMenu = document.querySelector('.side-menu');
-    if (sideMenu) {
+    if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
         $(sideMenu).midnight();
     }
 });

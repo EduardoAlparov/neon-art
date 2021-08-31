@@ -228,12 +228,15 @@
     max-width: 106rem;
     opacity: 0;
     transition: opacity 0.2s;
-    
+
 
     .animatable & {
         opacity: 1;
     }
     @include breakpoint(mobile) {
         margin-left: 0;
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 140%;
     }
 }

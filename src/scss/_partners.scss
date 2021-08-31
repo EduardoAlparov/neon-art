@@ -1,30 +1,63 @@
 .partners {
     padding-bottom: 9rem;
     padding-top: 9rem;
+
+    @include breakpoint(mobile) {
+        padding: 5rem 0;
+    }
 }
 
 .partners__content {
     padding-left: var(--sidebar-width, 0);
+
+    @include breakpoint(mobile) {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .partners__top-row {
     margin-bottom: 6rem;
     display: flex;
     align-items: flex-end;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+        display: contents;
+    }
 }
 
 .partners__heading {
     margin-right: 3rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+        margin-bottom: 3rem;
+
+        br {
+            display: none;
+        }
+    }
 }
 
 .partners__slider {
     .swiper-slide {
         width: 16.66%;
+
+        @include breakpoint(mobile) {
+            width: 33.33%;
+        }
     }
 }
 
 .partners__slider-arrows {
     margin-left: auto;
+
+    @include breakpoint(mobile) {
+        order: 10;
+        margin-top: 3rem;
+    }
 }
 
 .partners__slider-card {

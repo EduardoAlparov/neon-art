@@ -11,11 +11,19 @@
 
 .awards__content {
     padding-left: var(--sidebar-width, 0);
+
+    @include breakpoint(mobile) {
+        padding-left: 0;
+    }
    
 }
 
 .awards__heading {
     margin-bottom: 8.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .awards__selected-list {
@@ -23,6 +31,12 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-gap: 2rem;
     margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .awards__selected-list-item {
@@ -38,6 +52,11 @@
     position: relative;
     z-index: 1;
     padding-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+
+    }
 
     .no-touch &:hover {
         .awards__selected-card-backplate {
@@ -66,6 +85,11 @@
     flex-direction: column;
     justify-content: flex-end;
     transition: height 0.3s;
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+        
+    }
 }
 
 .awards__selected-card-competition-name {
@@ -81,6 +105,10 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 6.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
 }
 
 .awards__selected-card-place {
@@ -95,6 +123,10 @@
     width: 12rem;
     margin-left: 3.5rem;
     flex-shrink: 0;
+
+    @include breakpoint(mobile) {
+        width: 8.5rem;
+    }
 }
 
 .awards__selected-card-document-image {
@@ -110,6 +142,10 @@
     font-size: 19.4rem;
     line-height: 0.8;
     font-feature-settings: 'tnum' on, 'lnum' on;
+
+    @include breakpoint(mobile) {
+        font-size: 14rem;
+    }
 }
 
 .awards__selected-card-place-title {
@@ -124,6 +160,10 @@
     letter-spacing: 0.05em;
     margin-top: 0.5rem;
     margin-left: -0.7rem;
+
+    @include breakpoint(mobile) {
+        font-size: 3.15rem;
+    }
 }
 
 .awards__selected-card-watch-project {
@@ -153,6 +193,10 @@
     text-transform: lowercase;
     margin-bottom: 2rem;
     max-width: 38rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+    }
     
 }
 
@@ -168,6 +212,10 @@
 
     color: rgba(#363636, 0.4);
     margin-bottom: 0.4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
 }
 
 .awards__selected-card-prize-text {
@@ -175,6 +223,9 @@
     font-size: 1.6rem;
     line-height: 130%;
     text-transform: lowercase;
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
 }
 
 .awards__selected-card-gran-pri {
@@ -186,6 +237,11 @@
     flex-grow: 1;
     margin-top: -1rem;
     color: var(--primary-color);
+
+
+    @include breakpoint(mobile) {
+        font-size: 5.5rem;
+    }
 }
 
 
@@ -196,6 +252,10 @@
 
     .swiper-slide {
         width: 12.8rem;
+
+        @include breakpoint(mobile) {
+            width: 9rem;
+        }
     }
 }
 
