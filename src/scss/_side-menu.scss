@@ -1,24 +1,29 @@
 .side-menu {
     position: fixed;
     left: 0;
-    top: 0;
+    bottom: 0 !important;
+    top: auto !important;
     width: 100%;
-    height: 100%;
     z-index: 50;
     pointer-events: none;
     display: flex;
     flex-direction: column;
-    .container {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
+
+    opacity: 0;
+    transition: opacity 0.2s;
+    
+
+    .animatable & {
+        opacity: 1;
     }
+   
 }
 
 .side-menu__content {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    // height: 100vh;
 }
 
 .side-menu__panel {
@@ -49,4 +54,25 @@
     }
 
     @include redLineHover();
+}
+
+
+.midnightHeader.light {
+    .side-menu__nav-link {
+        color: rgba(#363636, 0.4);
+
+        &:link,
+        &:visited {
+            color: rgba(#363636, 0.4);
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            color: var(--text-color);
+        }
+    }
+}
+
+[data-midnight="light"] + [data-midnight="light"] {
+    padding-top: 0;
 }

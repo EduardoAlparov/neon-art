@@ -1,8 +1,10 @@
 .numbers {
-    margin-bottom: 11rem;
+    padding-bottom: 11rem;
+    padding-top: 9rem;
 
     @include breakpoint(mobile) {
-        margin-bottom: 5rem;
+        padding-bottom: 5rem;
+        padding-top: 5rem;
     }
 }
 

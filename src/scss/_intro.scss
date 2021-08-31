@@ -1,13 +1,13 @@
 .intro {
-    margin-bottom: 9rem;
+    // margin-bottom: 9rem;
     background: #292933;
     color: white;
     position: relative;
     z-index: 1;
 
-    @include breakpoint(mobile) {
-        margin-bottom: 5rem;
-    }
+    // @include breakpoint(mobile) {
+    //     margin-bottom: 5rem;
+    // }
 }
 
 .intro__bg {
@@ -226,6 +226,13 @@
     font-size: 4.4rem;
     line-height: 140%;
     max-width: 106rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+    
+
+    .animatable & {
+        opacity: 1;
+    }
     @include breakpoint(mobile) {
         margin-left: 0;
     }

@@ -21,6 +21,7 @@ import mobileMenuAccordions from './mobileMenuAccordions';
 import awardsSlider from './awardsSlider';
 import partnersSlider from './partnersSlider';
 import teamSlider from './teamSlider';
+import './midnight';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -44,10 +45,17 @@ document.addEventListener('DOMContentLoaded', function() {
     awardsSlider();
     partnersSlider();
     teamSlider();
+
+   
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300);
     slidingText();
+
+    const sideMenu = document.querySelector('.side-menu');
+    if (sideMenu) {
+        $(sideMenu).midnight();
+    }
 });

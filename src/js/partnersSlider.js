@@ -12,7 +12,7 @@ export default function partnersSlider() {
             slidesPerView: 6,
             spaceBetween: 10,
             speed: 700,
-            slidesPerColumn: 3,
+            slidesPerColumn: 2,
             slidesPerColumnFill: 'row',
             navigation: {
                 nextEl: element.querySelector('.slider-arrows__btn--next'),

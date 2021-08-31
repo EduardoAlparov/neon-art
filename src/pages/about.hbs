@@ -2,54 +2,9 @@
 {{#content "main"}}
 
 
+{{> side-menu }}
 
-<div class="side-menu">
-    <div class="container">
-        <div class="side-menu__content">
-            <div class="side-menu__panel">
-                <nav class="side-menu__nav">
-                    <a href="#" class="side-menu__nav-link">
-                        <span>
-                            О компании
-                        </span>
-                    </a>
-                    <a href="#" class="side-menu__nav-link">
-                        <span>
-                            История
-                        </span>
-                    </a>
-                    <a href="#" class="side-menu__nav-link">
-                        <span>
-                            награды
-                        </span>
-                    </a>
-                    <a href="#" class="side-menu__nav-link">
-                        <span>
-                            География
-                        </span>
-                    </a>
-                    <a href="#" class="side-menu__nav-link">
-                        <span>
-                            клиенты
-                        </span>
-                    </a>
-                    <a href="#" class="side-menu__nav-link">
-                        <span>
-                            Сотрудники
-                        </span>
-                    </a>
-                    <a href="#" class="side-menu__nav-link">
-                        <span>
-                            Вакансии
-                        </span>
-                    </a>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
-
-<section class="intro">
+<section class="intro" data-midnight="dark" id="company">
     <div class="intro__bg intro__bg--blue-overlay">
         <img src="img/about-intro.jpg" alt="">
     </div>
@@ -67,11 +22,9 @@
                     </h1>
                 </div>
             </div>
-            <div class="intro__text-content">
-                <p>
-                    компания основана в 1993 году и за эти годы стала крупнейшим игроком на рынке производства наружной
-                    рекламы и визуальной коммуникации.
-                </p>
+            <div class="intro__text-content js-sliding-text">
+                компания основана в 1993 году и за эти годы стала крупнейшим игроком на рынке производства наружной
+                рекламы и визуальной коммуникации.
             </div>
 
 
@@ -80,10 +33,10 @@
 </section>
 
 
-<section class="priorities">
+<section class="priorities" data-midnight="light">
     <div class="container">
         <div class="priorities__content">
-            <div class="priorities__text">
+            <div class="priorities__text js-sliding-text">
                 <p>
                     Приоритетами компании были и остаются качество, современные технологии и профессиональный дизайн.
                 </p>
@@ -105,7 +58,7 @@
 </section>
 
 
-<section class="products">
+<section class="products" data-midnight="dark">
     <div class="container">
         <div class="products__content">
             <h2 class="section-heading products__heading js-sliding-text">
@@ -186,7 +139,7 @@
 </section>
 
 
-<section class="company-history">
+<section class="company-history" data-midnight="light" id="history">
     <div class="container">
         <div class="company-history__content">
             <h2 class="section-heading company-history__heading js-sliding-text">
@@ -242,7 +195,7 @@
     </div>
 </section>
 
-<section class="quote">
+<section class="quote" data-midnight="dark">
     <div class="container">
         <div class="quote__content">
             <div class="quote__photo-container">
@@ -276,7 +229,7 @@
     </div>
 </section>
 
-<section class="awards">
+<section class="awards" data-midnight="light" id="awards">
     <div class="container">
         <div class="awards__content">
             <h2 class="section-heading awards__heading js-sliding-text">
@@ -519,7 +472,7 @@
 </section>
 
 
-<section class="partners js-partners">
+<section class="partners js-partners" data-midnight="light" id="clients">
     <div class="container">
         <div class="partners__content">
             <div class="partners__top-row">
@@ -929,7 +882,7 @@
                     </button>
                 </div>
             </div>
-            <div class="team__slider">
+            <div class="team__slider" id="team">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
@@ -1944,7 +1897,7 @@
                     </div>
                 </div>
             </div>
-            <div class="team__work">
+            <div class="team__work" id="vacancy">
                 <div class="team__work-phone">
                     <div class="team__work-phone-number">
                         <a href="tel:+78432926211">

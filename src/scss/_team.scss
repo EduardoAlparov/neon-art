@@ -1,7 +1,7 @@
 .team {
     background: #292933;
     color: white;
-    border-bottom: 1px solid rgba(white, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .team__content {
@@ -164,12 +164,11 @@
     svg {
         width: 1.4rem;
         height: 1.4rem;
-        fill: rgba(white, .4);
-        transition: fill .2s;
+        fill: rgba(white, 0.4);
+        transition: fill 0.2s;
         flex-shrink: 0;
         margin-left: 1.7rem;
     }
-
 
     @include redLineHover();
 

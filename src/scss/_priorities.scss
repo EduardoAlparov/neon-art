@@ -1,6 +1,7 @@
 .priorities {
    
-    margin-bottom: 9rem;
+    padding-bottom: 9rem;
+    padding-top: 9rem;
 }
 
 .priorities__content {
@@ -31,6 +32,12 @@
     backface-visibility: hidden;
     transform: translateZ(0);
     max-width: 55rem;
+
+    .no-touch &:hover {
+        .priorities__video-image {
+            transform: scale(1.2);
+        }
+    }
     &::before {
         content: '';
         display: block;
@@ -66,6 +73,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .3s;
 }
 
 .priorities__video-title {
