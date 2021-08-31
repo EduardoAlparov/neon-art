@@ -27,6 +27,7 @@ import companyHistorySlider from './companyHistorySlider';
 import './midnight';
 import historySlider from './historySlider';
 import revealHistoryBlock from './revealHistoryBlock';
+import sectionsMenu from './sectionsMenu';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -54,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     companyHistorySlider();
     historySlider();
     revealHistoryBlock();
+    
 });
 
 window.addEventListener('load', function() {
@@ -64,5 +66,6 @@ window.addEventListener('load', function() {
     const sideMenu = document.querySelector('.side-menu');
     if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
         $(sideMenu).midnight();
+        sectionsMenu();
     }
 });
