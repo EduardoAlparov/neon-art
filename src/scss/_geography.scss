@@ -1,0 +1,59 @@
+.geography {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        padding: 5rem 0;
+    }
+}
+
+.geography__content {
+    padding-left: var(--sidebar-width, 0);
+    padding-bottom: 9rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        justify-content: initial;
+        padding-bottom: 3rem;
+    }
+}
+
+.geography__heading {
+    margin-right: 3rem;
+    max-width: 74rem;
+
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin-bottom: 2rem;
+        margin-right: 0;
+    }
+}
+
+.geography__map-wrapper {
+    height: 72rem;
+    position: relative;
+    z-index: 100;
+    @include breakpoint(mobile) {
+        height: 28rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.geography__map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f5;
+}
+
+.geography__watch-project {
+
+}
