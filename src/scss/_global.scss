@@ -33,6 +33,7 @@ html {
     font-size: 10px;
     font-size: clamp(5px, 0.52vw, 25px);
     font-size: clamp(5px, 0.6vw, 25px);
+    font-size: clamp(5px, 0.58vw, 25px);
    
     @include noHighlight();
 
