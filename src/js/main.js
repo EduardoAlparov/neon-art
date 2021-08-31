@@ -25,6 +25,8 @@ import fancybox from './fancybox';
 import companyHistorySlider from './companyHistorySlider';
 
 import './midnight';
+import historySlider from './historySlider';
+import revealHistoryBlock from './revealHistoryBlock';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -50,6 +52,8 @@ document.addEventListener('DOMContentLoaded', function() {
     teamSlider();
     fancybox();
     companyHistorySlider();
+    historySlider();
+    revealHistoryBlock();
 });
 
 window.addEventListener('load', function() {
