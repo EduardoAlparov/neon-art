@@ -12,13 +12,15 @@ import pressCenter from './pressCenter';
 import accordions from './accordions';
 import modals from './modals';
 import datepicker from './datepicker';
-import pageHeaderNav from './pageHeaderNav';
 import menu from './menu';
 import menuSlider from './menuSlider';
 import numbersSlider from './numbersSlider';
 import projectsSlider from './projectsSlider';
 import slidingText from './numbers';
-
+import mobileMenuAccordions from './mobileMenuAccordions';
+import awardsSlider from './awardsSlider';
+import partnersSlider from './partnersSlider';
+import teamSlider from './teamSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -34,16 +36,18 @@ document.addEventListener('DOMContentLoaded', function() {
     modals();
     datepicker();
     pressCenter();
-    pageHeaderNav();
     menu();
     menuSlider();
     numbersSlider();
     projectsSlider();
-    
+    mobileMenuAccordions();
+    awardsSlider();
+    partnersSlider();
+    teamSlider();
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
     setTimeout(() => document.body.classList.add('animatable'), 300);
     slidingText();
-})
+});

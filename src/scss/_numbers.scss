@@ -7,7 +7,7 @@
 }
 
 .numbers__content {
-    padding-left: 19rem;
+    padding-left: var(--sidebar-width, 0);
     padding-right: 14rem;
     @include breakpoint(mobile) {
         padding: 0;
@@ -40,6 +40,37 @@
     margin-right: 10rem;
     &:last-child {
         margin-right: 0;
+    }
+
+    .swiper-slide-active &:nth-child(2),
+    .swiper-slide-duplicate-active &:nth-child(2) {
+        .numbers__card-digit {
+            transition: transform 0.5s ease 0.6s;
+        }
+    }
+    .swiper-slide-active &:nth-child(3),
+    .swiper-slide-duplicate-active &:nth-child(3) {
+        .numbers__card-digit {
+            transition: transform 0.5s ease 0.7s;
+        }
+    }
+    .swiper-slide-active &:nth-child(4),
+    .swiper-slide-duplicate-active &:nth-child(4) {
+        .numbers__card-digit {
+            transition: transform 0.5s ease 0.8s;
+        }
+    }
+    .swiper-slide-active &:nth-child(5),
+    .swiper-slide-duplicate-active &:nth-child(5) {
+        .numbers__card-digit {
+            transition: transform 0.5s ease 0.9s;
+        }
+    }
+    .swiper-slide-active &:nth-child(6),
+    .swiper-slide-duplicate-active &:nth-child(6) {
+        .numbers__card-digit {
+            transition: transform 0.5s ease 1s;
+        }
     }
 
     @include breakpoint(mobile) {
@@ -115,7 +146,6 @@
         width: 100%;
         flex-grow: 0;
     }
-
 }
 
 .numbers__slider-pagination {
@@ -144,7 +174,6 @@
         width: 4.4rem;
         height: 4.4rem;
         margin: 0;
-       
     }
 
     &:last-child {

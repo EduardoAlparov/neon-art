@@ -12,7 +12,7 @@ export default function numbersSlider() {
     elements.forEach(element => {
         const container = element.querySelector('.swiper-container');
         const links = Array.from(element.querySelectorAll('.numbers__slider-pagination-bullet'));
-        const AUTOPLAY_DURATION = 7;
+        const AUTOPLAY_DURATION = 3;
 
         const setActiveLink = index => {
             links.forEach(link => link.classList.remove('active'));

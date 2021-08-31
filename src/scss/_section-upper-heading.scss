@@ -1,0 +1,18 @@
+.section-upper-heading {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 130%;
+    text-transform: lowercase;
+    color: rgba(#363636, 0.4);
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+        font-weight: 400;
+    }
+
+    &--light {
+        color: rgba(white, 0.4);
+    }
+}

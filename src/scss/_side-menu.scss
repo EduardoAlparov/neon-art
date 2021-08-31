@@ -1,0 +1,52 @@
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    .container {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+.side-menu__content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.side-menu__panel {
+    margin-top: auto;
+    margin-right: auto;
+    width: var(--sidebar-width, 0);
+    margin-bottom: 12rem;
+}
+
+.side-menu__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.side-menu__nav-link {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 130%;
+    text-transform: lowercase;
+    pointer-events: initial;
+    color: rgba(white, 0.4);
+    margin-bottom: 0.8rem;
+
+    &:link,
+    &:visited {
+        color: rgba(white, 0.4);
+    }
+
+    @include redLineHover();
+}

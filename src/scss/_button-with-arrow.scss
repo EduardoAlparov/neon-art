@@ -1,0 +1,69 @@
+.button-with-arrow {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 120%;
+    
+    text-transform: lowercase;
+
+    transition: transform 0.4s ease 0.5s;
+    color: #afafaf;
+
+    &:link,
+    &:visited {
+        color: #afafaf;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 120%;
+        
+    }
+
+    svg {
+        width: 3.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        fill: currentColor;
+        margin-left: 2.5rem;
+
+        @include breakpoint(mobile) {
+            width: 3.6rem;
+            height: 1.8rem;
+            margin-left: 2rem;
+        }
+    }
+
+    .no-touch &:hover {
+        .button-with-arrow__text-inner {
+            transform: translateY(-100%);
+        }
+        .button-with-arrow__text {
+            &::after {
+                transform: translateY(-100%);
+            }
+        }
+    }
+}
+
+.button-with-arrow__text {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: attr(data-text);
+        transition: transform 0.3s;
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.button-with-arrow__text-inner {
+    transition: transform 0.3s;
+}

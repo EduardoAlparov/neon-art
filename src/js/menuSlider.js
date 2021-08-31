@@ -16,6 +16,7 @@ export default function menuSlider() {
                 crossFade: true
             },
             speed: 700,
+            autoHeight: true,
             navigation: {
                 nextEl: element.querySelector('.page-header__menu-slider-arrow--next'),
                 prevEl: element.querySelector('.page-header__menu-slider-arrow--prev')

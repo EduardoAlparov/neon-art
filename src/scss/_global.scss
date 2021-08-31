@@ -7,13 +7,14 @@
 }
 
 :root {
-    --max-container-width: 152rem;
+    --max-container-width: 252rem;
     --content-padding: 4rem;
     --primary-color: #E63327;
     --text-color: #363636;
     --grey: #292933;
     --montserrat: 'Montserrat', sans-serif;
     --header-height: 8rem;
+    --sidebar-width: 22rem;
 
     @include breakpoint(mobile) {
         --header-height: 5.6rem;
@@ -23,10 +24,16 @@
 
 html {
     box-sizing: border-box;
-    font-size: 10px;
+ 
    
     -webkit-text-size-adjust: 100%;
-    font-size: clamp(5px, 0.56vw, 18px);
+
+   
+    
+    font-size: 10px;
+    font-size: clamp(5px, 0.52vw, 25px);
+    font-size: clamp(5px, 0.6vw, 25px);
+   
     @include noHighlight();
 
 
