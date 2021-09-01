@@ -62,13 +62,14 @@ document.addEventListener('DOMContentLoaded', function() {
     realisedProjectsSidebar();
     taskGallery();
     productsSlider();
-    
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
-    setTimeout(() => document.body.classList.add('animatable'), 300);
-    slidingText();
+    setTimeout(() => {
+        slidingText();
+        document.body.classList.add('animatable');
+    }, 300);
 
     const sideMenu = document.querySelector('.side-menu');
     if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
