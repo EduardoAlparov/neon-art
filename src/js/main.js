@@ -31,6 +31,7 @@ import sectionsMenu from './sectionsMenu';
 import realisedProjectsSidebar from './realisedProjectsSidebar';
 import taskGallery from './taskGallery';
 import productsSlider from './productsSlider';
+import introParallax from './introParallax';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
     realisedProjectsSidebar();
     taskGallery();
     productsSlider();
+    
 });
 
 window.addEventListener('load', function() {
@@ -72,5 +74,7 @@ window.addEventListener('load', function() {
     if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
         $(sideMenu).midnight();
         sectionsMenu();
+
+        introParallax();
     }
 });

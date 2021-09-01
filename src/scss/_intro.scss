@@ -5,6 +5,8 @@
     position: relative;
     z-index: 1;
 
+    overflow: hidden;
+
     // @include breakpoint(mobile) {
     //     margin-bottom: 5rem;
     // }
