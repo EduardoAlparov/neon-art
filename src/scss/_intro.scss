@@ -84,6 +84,10 @@
     flex-direction: column;
     min-height: 100vh;
 
+    .intro--short & {
+        min-height: auto;
+    }
+
     @include breakpoint(tablet) {
         min-height: 88rem;
     }
@@ -99,6 +103,10 @@
     display: flex;
     align-items: flex-start;
     margin-bottom: 5rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     @include breakpoint(mobile) {
         margin-bottom: 3rem;

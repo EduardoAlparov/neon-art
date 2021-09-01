@@ -57,6 +57,11 @@ body {
     font-weight: 400;
     min-height: 1vw;
     -webkit-marquee-increment: 0vw;
+
+    &.dark {
+        background: #292933;
+        color: white;
+    }
 }
 
 main {

@@ -26,6 +26,15 @@ export default function accordions() {
         const btn = element.querySelector('.js-accordion-btn');
         const content = element.querySelector('.js-accordion-content');
 
+
+        if (element.classList.contains('active')) {
+            gsap.to(content, {
+                height: 'auto',
+                duration: 0,
+                onComplete: () => ScrollTrigger.refresh()
+            });
+        }
+
         btn.addEventListener('click', event => {
             event.preventDefault();
 
@@ -46,6 +55,8 @@ export default function accordions() {
             } else {
                 openAccordion(content);
             }
+
+            
             element.classList.toggle('active');
         });
     });

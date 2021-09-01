@@ -28,6 +28,7 @@ import './midnight';
 import historySlider from './historySlider';
 import revealHistoryBlock from './revealHistoryBlock';
 import sectionsMenu from './sectionsMenu';
+import realisedProjectsSidebar from './realisedProjectsSidebar';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
     companyHistorySlider();
     historySlider();
     revealHistoryBlock();
-    
+    realisedProjectsSidebar();
 });
 
 window.addEventListener('load', function() {

@@ -1,0 +1,203 @@
+.realised-projects {
+    padding-bottom: 9rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    @include breakpoint(mobile) {
+        padding-bottom: 5rem;
+    }
+}
+
+.realised-projects__layout {
+    display: grid;
+    grid-template-columns: minmax(0, 19rem) minmax(0, 1fr);
+    grid-gap: 3rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 3rem;
+    }
+}
+
+.realised-projects__sidebar {
+    will-change: min-height;
+}
+
+.realised-projects__sidebar-inner {
+    transform: translate3d(0, 0, 0);
+    will-change: position, transform;
+}
+
+.realised-projects__nav-accordion {
+    margin-bottom: 2.8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1.6rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.realised-projects__nav-accordion-btn {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 130%;
+    text-transform: lowercase;
+    color: rgba(white, 0.4);
+    transition: color 0.2s;
+    cursor: pointer;
+
+    .realised-projects__nav-accordion:not(.active) & {
+        &:hover {
+            color: white;
+        }
+    }
+
+    .realised-projects__nav-accordion.active & {
+        color: white;
+    }
+}
+
+.realised-projects__nav-accordion-content {
+    height: 0;
+    overflow: hidden;
+}
+
+.realised-projects__nav-accordion-content-inner {
+    padding-top: 2rem;
+
+    @include breakpoint(mobile) {
+        padding-top: 1rem;
+    }
+}
+
+.realised-projects__nav-accordion-link {
+    display: block;
+    margin-bottom: 1.4rem;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 130%;
+    text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include redLineHover();
+}
+
+.realised-projects__catalog-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        margin: 0 calc(-1 * var(--content-padding));
+    }
+}
+
+.realised-projects__catalog-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 1;
+    min-height: 22rem;
+    color: white;
+    padding: 1.8rem;
+
+    @include breakpoint(mobile) {
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+
+    @include breakpoint(mobile) {
+        .realised-projects__catalog-card-image-container::after {
+            opacity: 1;
+        }
+
+        .realised-projects__catalog-card-row {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+    }
+    .no-touch &:hover {
+        .realised-projects__catalog-card-image-container::after {
+            opacity: 1;
+        }
+
+        .realised-projects__catalog-card-row {
+            opacity: 1;
+            visibility: inherit;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+
+        .realised-projects__catalog-card-image {
+            transform: scale(1.2);
+            transition: transform 12s;
+        }
+    }
+}
+
+.realised-projects__catalog-card-image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(41, 41, 51, 0.6), rgba(41, 41, 51, 0.6));
+        transition: opacity 0.2s;
+        opacity: 0;
+    }
+}
+
+.realised-projects__catalog-card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+}
+
+.realised-projects__catalog-card-row {
+    display: flex;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
+    svg {
+        flex-shrink: 0;
+        margin-left: 2rem;
+        width: 3.6rem;
+        height: 1.6rem;
+        fill: currentColor;
+        margin-bottom: 0.3rem;
+    }
+}
+
+.realised-projects__catalog-card-title {
+    width: 50%;
+    flex-grow: 1;
+    font-weight: 300;
+    font-size: 2rem;
+    line-height: 140%;
+}
