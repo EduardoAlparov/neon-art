@@ -29,6 +29,8 @@ import historySlider from './historySlider';
 import revealHistoryBlock from './revealHistoryBlock';
 import sectionsMenu from './sectionsMenu';
 import realisedProjectsSidebar from './realisedProjectsSidebar';
+import taskGallery from './taskGallery';
+import productsSlider from './productsSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -57,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
     historySlider();
     revealHistoryBlock();
     realisedProjectsSidebar();
+    taskGallery();
+    productsSlider();
 });
 
 window.addEventListener('load', function() {

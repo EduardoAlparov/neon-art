@@ -1,6 +1,10 @@
 .numbers {
-    padding-bottom: 11rem;
+    padding-bottom: 9rem;
     padding-top: 9rem;
+
+    &--grey-bg {
+        background: #F2F2F5;
+    }
 
     @include breakpoint(mobile) {
         padding-bottom: 5rem;
