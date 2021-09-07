@@ -106,6 +106,10 @@
 .history__block-text {
     font-size: 1.6rem;
     line-height: 160%;
+    margin-bottom: 1.5rem;
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     @include breakpoint(mobile) {
         font-size: 1.4rem;
@@ -153,7 +157,7 @@
     .history__small-block.revealed & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity 0.3s, visibility 0.3s;
+        transition: opacity 0.4s, visibility 0.4s;
         position: static;
     }
 
@@ -222,16 +226,16 @@
     align-items: center;
     font-size: 1.6rem;
     line-height: 160%;
-
+    text-transform: lowercase;
     @include breakpoint(mobile) {
         font-size: 1.4rem;
         line-height: 150%;
         color: rgba(#363636, 0.4);
     }
 
-    .history__small-block.revealed & {
-        display: none;
-    }
+    // .history__small-block.revealed & {
+    //     display: none;
+    // }
 
     svg {
         width: 1.6rem;
@@ -239,10 +243,17 @@
         fill: currentColor;
         flex-shrink: 0;
         margin-right: 1.6rem;
-
+        transition: transform .2s;
         @include breakpoint(mobile) {
             width: 1.4rem;
             height: 0.7rem;
+            margin-right: 1.2rem;
+        }
+    }
+
+    &.active {
+        svg {
+            transform: rotate(180deg);
         }
     }
 
