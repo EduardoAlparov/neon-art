@@ -31,64 +31,17 @@
 }
 
 .numbers__list {
-    display: flex;
-    align-items: flex-start;
-    column-gap: 10rem;
-    row-gap: 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3rem;
 
     @include breakpoint(mobile) {
-        flex-direction: column;
-        row-gap: 3.5rem;
+        grid-template-columns: minmax(0, 1fr);
     }
 }
 
 .numbers__list-item {
-    margin-right: 10rem;
-    &:last-child {
-        margin-right: 0;
-    }
-
-    .swiper-slide-active &:nth-child(2),
-    .swiper-slide-duplicate-active &:nth-child(2) {
-        .numbers__card-digit {
-            transition: transform 0.5s ease 0.6s;
-        }
-    }
-    .swiper-slide-active &:nth-child(3),
-    .swiper-slide-duplicate-active &:nth-child(3) {
-        .numbers__card-digit {
-            transition: transform 0.5s ease 0.7s;
-        }
-    }
-    .swiper-slide-active &:nth-child(4),
-    .swiper-slide-duplicate-active &:nth-child(4) {
-        .numbers__card-digit {
-            transition: transform 0.5s ease 0.8s;
-        }
-    }
-    .swiper-slide-active &:nth-child(5),
-    .swiper-slide-duplicate-active &:nth-child(5) {
-        .numbers__card-digit {
-            transition: transform 0.5s ease 0.9s;
-        }
-    }
-    .swiper-slide-active &:nth-child(6),
-    .swiper-slide-duplicate-active &:nth-child(6) {
-        .numbers__card-digit {
-            transition: transform 0.5s ease 1s;
-        }
-    }
-
-    @include breakpoint(mobile) {
-        margin-bottom: 3.5rem;
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    @supports (gap: 10rem) {
-        margin: 0;
-    }
+    
 }
 
 .numbers__card-digit-wrapper {

@@ -9,9 +9,10 @@ export default function awardsSlider() {
         const container = element.querySelector('.swiper-container');
         new Swiper(container, {
             watchOverflow: true,
-            slidesPerView: 'auto',
+            slidesPerView: window.matchMedia("(max-width: 640px)").matches ? 3 : 9,
             spaceBetween: 20,
             speed: 700,
+            slidesPerGroup: window.matchMedia("(max-width: 640px)").matches ? 3 : 9,
             navigation: {
                 nextEl: element.querySelector('.slider-arrows__btn--next'),
                 prevEl: element.querySelector('.slider-arrows__btn--prev')

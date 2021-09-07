@@ -6,8 +6,8 @@ export default function realisedProjectsSidebar() {
 
     if (!sidebar) return;
 
-    new StickySidebar(sidebar, {
-        topSpacing: 40,
+    window.stickySidebar = new StickySidebar(sidebar, {
+        topSpacing: document.querySelector('.page-header').offsetHeight + 40,
         bottomSpacing: 40,
         containerSelector: '.realised-projects__layout',
         innerWrapperSelector: '.realised-projects__sidebar-inner',

@@ -77,12 +77,12 @@
             }
 
             .projects__slider-card-image-container {
-                clip-path: polygon(
-                    calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2) 0,
-                    calc(((100vw - 100% - var(--sb-width, 0)) / 2) + 100%) 0,
-                    calc(((100vw - 100% - var(--sb-width, 0)) / 2) + 100%) 100%,
-                    calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2) 100%
-                );
+                // clip-path: polygon(
+                //     calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2) 0,
+                //     calc(((100vw - 100% - var(--sb-width, 0)) / 2) + 100%) 0,
+                //     calc(((100vw - 100% - var(--sb-width, 0)) / 2) + 100%) 100%,
+                //     calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2) 100%
+                // );
             }
 
             .projects__slider-card-bg::after {
@@ -116,8 +116,8 @@
     padding-bottom: 6rem;
 
     @include breakpointMF(small-tablet) {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        transition: clip-path 0.4s;
+        // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        // transition: clip-path 0.4s;
     }
 
     @include breakpoint(mobile) {
@@ -137,7 +137,8 @@
     bottom: 0;
 
     background: #292933;
-
+    overflow: hidden;
+    backface-visibility: hidden;
     z-index: -1;
 
     &::after {
@@ -147,8 +148,7 @@
         top: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(0deg, rgba(41, 41, 51, 0.5), rgba(41, 41, 51, 0.5)),
-            linear-gradient(315.37deg, rgba(0, 0, 0, 0.31) 38.85%, rgba(0, 0, 0, 0) 53.61%);
+        background-color: rgba(black, 0.5);
         transition: opacity 0.4s;
 
         opacity: 0;
@@ -168,9 +168,10 @@
 .projects__slider-card-bg-image {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 0%;
+    height: 140%;
     width: 100%;
-    height: 100%;
+   
     object-fit: cover;
 }
 
@@ -266,6 +267,6 @@
         top: 100%;
         width: 100%;
         height: 1px;
-        background-color: var(--primary-color);
+        background-color: rgba(white, 0.4);
     }
 }

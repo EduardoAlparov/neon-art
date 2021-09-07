@@ -1,12 +1,10 @@
 .services {
-    
     padding-top: 9rem;
     padding-bottom: 4rem;
     background: #292933;
     color: white;
 
     @include breakpoint(mobile) {
-       
         padding-top: 5rem;
         padding-bottom: 0;
     }
@@ -72,7 +70,7 @@
 
         .services__card-image {
             transform: scale(1.05);
-            transition: transform 10s ease-out;
+            transition: transform 5s ease-out;
         }
     }
 }
@@ -99,8 +97,6 @@
             width: 100%;
             height: 100%;
             transition: opacity 0.4s;
-
-            
         }
 
         &::after {
@@ -110,8 +106,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(0deg, rgba(41, 41, 51, 0.6), rgba(41, 41, 51, 0.6)),
-                linear-gradient(90deg, rgba(0, 0, 0, 0.35) 8.07%, rgba(0, 0, 0, 0) 58.6%);
+            background-color: rgba(black, 0.7);
             opacity: 0;
             z-index: 10;
             transition: opacity 0.4s;
@@ -179,13 +174,16 @@
     line-height: 120%;
     text-transform: lowercase;
 
+    a {
+        @include redLineHover();
+    }
+
     @include breakpoint(mobile) {
         font-size: 2rem;
         line-height: 120%;
         max-width: 20rem;
     }
 }
-
 
 .services__card-link {
     display: block;

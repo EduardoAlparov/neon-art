@@ -12,8 +12,9 @@ export default function teamSlider() {
             watchOverflow: true,
             slidesPerView: 6,
             spaceBetween: 0,
-            speed: 700,
+            speed: 1500,
             slidesPerColumn: 3,
+            slidesPerGroup: 9,
             slidesPerColumnFill: 'row',
             navigation: {
                 nextEl: element.querySelector('.slider-arrows__btn--next'),
@@ -25,7 +26,9 @@ export default function teamSlider() {
             options = {
                 ...options,
                 slidesPerView: 2,
-                slidesPerColumn: 2
+                slidesPerColumn: 2,
+                slidesPerGroup: 1,
+                speed: 700
             };
         }
 

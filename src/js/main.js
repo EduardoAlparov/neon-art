@@ -32,6 +32,18 @@ import realisedProjectsSidebar from './realisedProjectsSidebar';
 import taskGallery from './taskGallery';
 import productsSlider from './productsSlider';
 import introParallax from './introParallax';
+import fixedHeader from './fixedHeader';
+import fixedLogo from './fixedLogo';
+import imagesLoaded from 'imagesloaded';
+
+
+import projectsParallax from './projectsParallax';
+import hideSideNav from './hideSideNav';
+
+
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
     polyfills();
@@ -59,23 +71,35 @@ document.addEventListener('DOMContentLoaded', function() {
     companyHistorySlider();
     historySlider();
     revealHistoryBlock();
-    realisedProjectsSidebar();
+   
     taskGallery();
     productsSlider();
+    fixedHeader();
+    projectsParallax();
+   
+    let imgLoad = imagesLoaded(document.querySelector('.page-content'));
+    function onAlways() {
+        ScrollTrigger.refresh();
+        fixedLogo();
+       
+        const sideMenu = document.querySelector('.side-menu');
+        if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
+            $(sideMenu).midnight();
+            sectionsMenu();
+            hideSideNav();
+        }
+    }
+
+    imgLoad.on('always', onAlways);
 });
 
 window.addEventListener('load', function() {
     document.body.classList.add('loaded');
+    realisedProjectsSidebar();
+    introParallax();
     setTimeout(() => {
         slidingText();
+
         document.body.classList.add('animatable');
     }, 300);
-
-    const sideMenu = document.querySelector('.side-menu');
-    if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
-        $(sideMenu).midnight();
-        sectionsMenu();
-
-        introParallax();
-    }
 });

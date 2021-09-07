@@ -5,18 +5,26 @@ gsap.registerPlugin(ScrollTrigger);
 export default function accordions() {
     const SPEED = 0.7;
 
+    const refresh = () => {
+        ScrollTrigger.refresh();
+        if (window.stickySidebar) {
+            window.stickySidebar.updateSticky();
+            console.log('Updated sticky sidebar')
+        }
+    }
+
     const openAccordion = element => {
         gsap.to(element, {
             height: 'auto',
             duration: SPEED,
-            onComplete: () => ScrollTrigger.refresh()
+            onComplete: refresh
         });
     };
     const closeAccordion = element => {
         gsap.to(element, {
             height: 0,
             duration: SPEED,
-            onComplete: () => ScrollTrigger.refresh()
+            onComplete: refresh
         });
     };
 
@@ -31,7 +39,7 @@ export default function accordions() {
             gsap.to(content, {
                 height: 'auto',
                 duration: 0,
-                onComplete: () => ScrollTrigger.refresh()
+                onComplete: () => refresh
             });
         }
 

@@ -9,7 +9,7 @@ export default function pressCenter() {
         const container = element.querySelector('.swiper-container');
 
         new Swiper(container, {
-            slidesPerView: 'auto',
+            slidesPerView: window.matchMedia("(max-width: 640px)").matches ? 'auto' : 3,
             spaceBetween: 20,
             watchOverflow: true,
             speed: 700,
