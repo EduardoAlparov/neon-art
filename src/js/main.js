@@ -43,6 +43,7 @@ import hideSideNav from './hideSideNav';
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import historyStickyDates from './historyStickyDates';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
     productsSlider();
     fixedHeader();
     projectsParallax();
+    historyStickyDates();
    
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));
     function onAlways() {

@@ -13,9 +13,6 @@ export default function fixedLogo() {
         requestAnimationFrame(() => {
             const newTop = introLogo.getBoundingClientRect().top;
             const newLeft = introLogo.getBoundingClientRect().left;
-
-
-            console.log('NEw top left', newTop, newLeft)
             introLogo.style.top = `${newTop}px`;
             introLogo.style.left = `${newLeft}px`;
         })
