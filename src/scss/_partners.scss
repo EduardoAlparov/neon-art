@@ -90,6 +90,11 @@
     height: 78%;
     object-fit: contain;
     filter: grayscale(100%);
+
+    @include breakpoint(mobile) {
+        width: 95%;
+        height: 95%;
+    }
 }
 
 .partners__slider-card-content {
@@ -105,6 +110,10 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity .3s, visibility 0s linear .3s;
+
+    @include breakpoint(mobile) {
+        padding: 1rem;
+    }
 }
 
 .partners__slider-card-title {
@@ -112,6 +121,11 @@
     font-size: 2rem;
     line-height: 130%;
     margin-bottom: 1rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        margin-bottom: 0.7rem;
+    }
 }
 
 .partners__slider-card-text {
@@ -120,6 +134,10 @@
     margin-bottom: 2rem;
     line-height: 130%;
     color: rgba(#363636, 0.4);
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+    }
 }
 
 .partners__slider-card-show {

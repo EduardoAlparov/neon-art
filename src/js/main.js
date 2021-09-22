@@ -36,14 +36,13 @@ import fixedHeader from './fixedHeader';
 import fixedLogo from './fixedLogo';
 import imagesLoaded from 'imagesloaded';
 
-
 import projectsParallax from './projectsParallax';
 import hideSideNav from './hideSideNav';
-
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import historyStickyDates from './historyStickyDates';
+import servicesEqualHeight from './servicesEqualHeight';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -72,18 +71,19 @@ document.addEventListener('DOMContentLoaded', function() {
     companyHistorySlider();
     historySlider();
     revealHistoryBlock();
-   
+
     taskGallery();
     productsSlider();
     fixedHeader();
     projectsParallax();
     historyStickyDates();
-   
+    servicesEqualHeight();
+
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));
     function onAlways() {
         ScrollTrigger.refresh();
         fixedLogo();
-       
+
         const sideMenu = document.querySelector('.side-menu');
         if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
             $(sideMenu).midnight();
@@ -93,6 +93,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     imgLoad.on('always', onAlways);
+
+    document.addEventListener('lazyloaded', () => {
+        ScrollTrigger.refresh();
+    });
 });
 
 window.addEventListener('load', function() {

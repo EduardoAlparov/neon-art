@@ -9,7 +9,13 @@
     color: white;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.4s;
+
+    @include breakpointMF(small-tablet) {
+        body.page-header-hidden:not(.menu-open) &.fixed {
+            transform: translateY(-100%);
+        }
+    }
 
     .page-header__fixed-header-backplate {
         position: absolute;
@@ -18,7 +24,7 @@
         height: 100%;
         right: 0;
         background-color: #292933;
-        
+
         transition: opacity 0.2s;
         opacity: 0;
         pointer-events: none;
@@ -26,17 +32,12 @@
     }
 
     &.fixed {
-        &::after {
-            opacity: 0;
-        }
-
         .page-header__fixed-header-backplate {
-            opacity: 1;
+            opacity: 0.95;
         }
     }
 
     @include breakpointMF(small-tablet) {
-        
         &::before {
             content: '';
             position: absolute;
@@ -52,10 +53,7 @@
         }
 
         .page-header__fixed-header-backplate {
-            
         }
-
-        
 
         .menu-open & {
             &::before {
@@ -111,7 +109,7 @@
     .animatable & {
         opacity: 1;
         visibility: inherit;
-        transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s;
+        transition: opacity 0.6s ease 0.3s, visibility 0.6s ease 0.3s, transform 0.4s;
     }
 }
 
@@ -355,11 +353,7 @@
     margin-bottom: 1.6rem;
 
     a {
-
-        .no-touch & {
-            @include redLineHover();
-        }
-       
+        @include redLineHover();
     }
 
     @include breakpoint(mobile) {
@@ -718,10 +712,7 @@
     z-index: 1;
 
     @include breakpoint(mobile) {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+        padding: 0.95rem 2.5rem;
     }
 
     &::before {

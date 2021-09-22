@@ -13,7 +13,7 @@ export default function historyStickyDates() {
         ScrollTrigger.create({
             trigger: element,
             start: () => `top top+=${document.querySelector('.page-header').offsetHeight + 70}`,
-            markers: true,
+            markers: false,
             end: () => `+=${element.querySelector('.history__block-content').offsetHeight - date.offsetHeight}`,
             pin: date,
             pinSpacing: true

@@ -130,8 +130,10 @@
 
 .projects__slider-card-bg {
     position: absolute;
-    left: calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
-    right: calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
+    // left: calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
+    // right: calc(-1 * (100vw - 100% - var(--sb-width, 0)) / 2);
+    right: 0;
+    left: 0;
     width: auto;
     top: 0;
     bottom: 0;
@@ -173,6 +175,10 @@
     width: 100%;
    
     object-fit: cover;
+
+    @include breakpoint(mobile) {
+       height: 100%;
+    }
 }
 
 .projects__slider-card-title {

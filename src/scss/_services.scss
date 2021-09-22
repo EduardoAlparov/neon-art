@@ -53,8 +53,9 @@
     min-height: 48rem;
 
     @include breakpoint(mobile) {
-        min-height: auto;
+       
         padding: 2rem var(--content-padding);
+        min-height: var(--equal-height, auto);
     }
     .no-touch &:hover {
         .services__card-image-container::after {
@@ -62,10 +63,6 @@
         }
         .services__card-image-container::before {
             opacity: 0;
-        }
-
-        .services__card-inner-list-item {
-            color: white;
         }
 
         .services__card-image {

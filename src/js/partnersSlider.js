@@ -24,7 +24,7 @@ export default function partnersSlider() {
         if (window.matchMedia('(max-width: 640px)').matches) {
             options = {
                 ...options,
-                slidesPerView: 3,
+                slidesPerView: 4,
                 slidesPerColumn: 2
             };
         }

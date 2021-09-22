@@ -15,7 +15,7 @@ export default function numbersSlider() {
         const AUTOPLAY_DURATION = 3000;
         let offset = 0;
         containers.forEach(container => {
-            const startTime = 600 * offset;
+            const startTime = 500 * 2 * offset;
 
             console.log('Start time', startTime);
             const slider = new Swiper(container, {
@@ -27,22 +27,21 @@ export default function numbersSlider() {
                 loop: true,
                 fadeEffect: {
                     crossFade: true
-                },
+                }
             });
 
-            const autoplay = () => {
-                gsap.delayedCall(AUTOPLAY_DURATION / 1000, () => {
+            const autoplay = (initial = false) => {
+                gsap.delayedCall(initial ? SPEED / 1000 : (AUTOPLAY_DURATION / 1000), () => {
                     slider.slideNext();
                     autoplay();
-                })
-            }
+                });
+            };
 
             offset += 1;
 
             gsap.delayedCall(startTime / 1000, () => {
-                autoplay();
-            })
-
+                autoplay(true);
+            });
         });
     });
 }

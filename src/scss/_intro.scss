@@ -116,7 +116,6 @@
 .intro__logo-wrapper {
     flex-shrink: 0;
     width: var(--sidebar-width);
-  
 
     @include breakpoint(mobile) {
         display: none;
@@ -125,15 +124,29 @@
 
 .intro__logo-wrapper-inner {
     overflow: hidden;
+    transition: transform .4s;
+  
+
+    @include breakpointMF(small-tablet) {
+        body.page-header-hidden:not(.menu-open) &.fixed {
+            transform: translateY(-7.2rem);
+        }
+    }
 }
 
 .intro__logo {
     display: block;
     transform: translateY(100%);
-    transition: transform .4s;
+    transition: transform 0.4s;
 
     .animatable & {
         transform: translateY(0%);
+    }
+
+    .no-touch &:hover {
+        svg.intro__logo-image {
+            fill: #d42115;
+        }
     }
 }
 
@@ -141,6 +154,11 @@
     display: block;
     height: auto;
     width: 18.6rem;
+}
+
+svg.intro__logo-image {
+    fill: #e63327;
+    transition: fill 0.2s;
 }
 
 .intro__watch-project-wrapper {
@@ -180,6 +198,10 @@
         .intro__watch-project-text-inner {
             background-size: 100% 1px;
         }
+
+        .intro__watch-project-play::before {
+            clip-path: inset(0 0 0 0);
+        }
     }
 }
 
@@ -202,12 +224,8 @@
     border-radius: 50%;
     transition: background-color 0.2s;
     border: 1px solid rgba(#ffffff, 0.4);
-
-    @include breakpoint(mobile) {
-        width: 4rem;
-        height: 4rem;
-        margin-right: 1rem;
-    }
+    position: relative;
+    z-index: 1;
 
     svg {
         fill: white;
@@ -222,6 +240,27 @@
             margin-left: 0.2rem;
         }
     }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(white, 0.15);
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 0.4s;
+        border-radius: 50%;
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    @include breakpoint(mobile) {
+        width: 4rem;
+        height: 4rem;
+        margin-right: 1rem;
+    }
 }
 
 .intro__text-content {
@@ -233,6 +272,10 @@
     max-width: 106rem;
     opacity: 0;
     transition: opacity 0.2s;
+
+    @include breakpointMF(small-tablet) {
+        margin-bottom: -2rem;
+    }
 
     .animatable & {
         opacity: 1;

@@ -1,0 +1,51 @@
+.photo-with-details {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        padding: 5rem 0;
+    }
+}
+
+.photo-with-details__image-container {
+    position: relative;
+    color: white;
+    margin-bottom: 3.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 33.92%, rgba(0, 0, 0, 0) 67.12%);
+    }
+}
+
+.photo-with-details__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.photo-with-details__heading {
+ 
+    left: var(--sidebar-width);
+    position: absolute;
+    top: 6rem;
+    right: 0;
+    z-index: 10;
+}
+
+.photo-with-details__text-content {
+    margin-left: var(--sidebar-width);
+    font-size: 1.6rem;
+    line-height: 160%;
+    text-transform: lowercase;
+    max-width: 52rem;
+}

@@ -6,7 +6,10 @@
 
 <section class="intro" data-midnight="dark" id="company">
     <div class="intro__bg intro__bg--heavy-overlay">
-        <img src="img/about-intro.jpg" alt="">
+        <picture>
+            <source srcset="img/about-intro.jpg" media="(max-width: 640px)">
+            <img src="img/about-intro.jpg" alt="">
+        </picture>
     </div>
     <div class="container">
         <div class="intro__content">
@@ -14,7 +17,9 @@
                 <div class="intro__logo-wrapper">
                     <div class="intro__logo-wrapper-inner">
                         <a href="#" class="intro__logo">
-                            <img src="img/logo.svg" alt="" class="intro__logo-image">
+                            <svg width="186" height="45" aria-hidden="true" class="intro__logo-image icon-logo">
+                                <use xlink:href="#logo"></use>
+                            </svg>
                         </a>
                     </div>
                 </div>
