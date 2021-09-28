@@ -672,7 +672,102 @@
                     </div>
                 </div>
             </div>
+            <a href="#" class="button-with-arrow case-realised-projects__show-more">
+                <div class="button-with-arrow__text" data-text="смотреть все проекты">
+                    <div class="button-with-arrow__text-inner">
+                        смотреть все проекты
+                    </div>
+                </div>
+
+                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                    <use xlink:href="#arrow-right"></use>
+                </svg>
+            </a>
         </div>
+
+    </div>
+</section>
+
+
+<section class="case-made-by" data-midnight="light">
+    <div class="container">
+        <img data-src="img/made-by.jpg" alt="" class="case-made-by__image lazyload">
+        <div class="case-made-by__content">
+            <div class="case-made-by__awards">
+                <h3 class="case-made-by__title">
+                    Награды проекта
+                </h3>
+                <ul class="case-made-by__awards-list">
+                    <li class="case-made-by__awards-list-item">
+                        1 место в номинации<br>
+                        Стелы и крышные установки
+                    </li>
+                    <li class="case-made-by__awards-list-item">
+                        1 место в номинации<br>
+                        оформление фасадов предприятия в сфере услуг
+                    </li>
+                </ul>
+            </div>
+            <div class="case-made-by__bottom-row">
+                <div class="case-made-by__authors">
+                    <ul class="case-made-by__authors-list">
+                        <li class="case-made-by__authors-list-item">
+                            <h4 class="case-made-by__title">
+                                руководитель проекта
+                            </h4>
+                            <div class="case-made-by__author-name">
+                                Романова Юлия
+                            </div>
+                        </li>
+                        <li class="case-made-by__authors-list-item">
+                            <h4 class="case-made-by__title">
+                                дизайнер
+                            </h4>
+                            <div class="case-made-by__author-name">
+                                Нефедов Николай
+                            </div>
+                        </li>
+                        <li class="case-made-by__authors-list-item">
+                            <h4 class="case-made-by__title">
+                                Конструктор
+                            </h4>
+                            <div class="case-made-by__author-name">
+                                Проскурин Руслан
+                            </div>
+                        </li>
+                        <li class="case-made-by__authors-list-item">
+                            <h4 class="case-made-by__title">
+                                арт-директор
+                            </h4>
+                            <div class="case-made-by__author-name">
+                                Нефедов Николай
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="case-made-by__date">
+                    <h4 class="case-made-by__title">
+                        дата выпуска
+                    </h4>
+                    <div class="case-made-by__date-text">
+                        30.06.2021
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="button-with-arrow case-made-by__share">
+                <div class="button-with-arrow__text" data-text="Поделиться проектом">
+                    <div class="button-with-arrow__text-inner">
+                        Поделиться проектом
+                    </div>
+                </div>
+
+                <svg width="14" height="14" aria-hidden="true" class="icon-share">
+                    <use xlink:href="#share"></use>
+                </svg>
+            </a>
+
+        </div>
+
 
     </div>
 </section>
@@ -688,7 +783,9 @@
                     <form action="/" method="POST" class="contact-form__form" data-need-validation="">
                         <div class="contact-form__fields">
                             <div class="contact-form__field contact-form__field--wide" id="subject-select">
-                                <select name="subject" class="js-custom-select" required data-parsley-errors-container="#subject-select" data-parsley-class-handler="#subject-select" data-parsley-trigger="change">
+                                <select name="subject" class="js-custom-select" required
+                                    data-parsley-errors-container="#subject-select"
+                                    data-parsley-class-handler="#subject-select" data-parsley-trigger="change">
                                     <option value="" placeholder>
                                         выбрать тему сообщения
                                     </option>
