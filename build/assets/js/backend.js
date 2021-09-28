@@ -34,4 +34,39 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    const loadMoreNewsBtn = document.querySelector('.js-load-more-news');
+    if (loadMoreNewsBtn) {
+        loadMoreNewsBtn.addEventListener('click', event => {
+            event.preventDefault();
+
+            if (window.axios) {
+                let loadPageCounter = 1;
+                axios
+                    .get(window.location.href, {
+                        params: {
+                            page: ++loadPageCounter
+                        }
+                    })
+                    .then(response => {
+                        const parser = new DOMParser();
+                        const nextPageHtml = parser.parseFromString(response.data, 'text/html');
+
+                        const nextPageItems = Array.from(nextPageHtml.querySelectorAll('.news__catalog-list-item'));
+                        const nextPageShowMore = nextPageHtml.querySelector('.js-load-more-news');
+
+                        if (typeof window.addNews === 'function') {
+                            window.addNews(...nextPageItems);
+                        }
+
+                        if (!nextPageShowMore) {
+                            const showMoreWrapper = document.querySelector('.news__btn-wrapper');
+                            showMoreWrapper.remove();
+                        }
+                    })
+                    .catch(err => {
+                        console.error(err);
+                    });
+            }
+        });
+    }
 });

@@ -46,6 +46,7 @@ import servicesEqualHeight from './servicesEqualHeight';
 import loadMoreProjects from './loadMoreProjects';
 import photoSlider from './photoSlider';
 import caseRealisedProjects from './caseRealisedProjects';
+import loadMoreNews from './loadMoreNews';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -82,6 +83,7 @@ document.addEventListener('DOMContentLoaded', function() {
     historyStickyDates();
     servicesEqualHeight();
     loadMoreProjects();
+    loadMoreNews();
     photoSlider();
     caseRealisedProjects();
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));

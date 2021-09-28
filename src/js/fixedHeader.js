@@ -12,7 +12,7 @@ export default function fixedHeader() {
         start: 'top top',
         end: () => `+=${document.body.scrollHeight}`,
         onUpdate: ({ direction }) => {
-            console.log('direction:', direction);
+            // console.log('direction:', direction);
 
             if (direction === 1) {
                 document.body.classList.add('page-header-hidden');

@@ -238,6 +238,9 @@
     margin-top: 6rem;
     display: flex;
     padding-left: var(--sidebar-width);
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
 }
 .realised-projects__btn {
     margin-left: auto;
@@ -251,6 +254,10 @@
     font-size: 2.8rem;
     line-height: 120%;
     text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
+    }
     &:link,
     &:visited {
         color: rgba(white, 0.4);
@@ -262,6 +269,11 @@
         margin-right: 2rem;
         fill: currentColor;
         margin-top: 0.2rem;
+        @include breakpoint(mobile) {
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-right: 1rem;
+        }
     }
 
     span {
