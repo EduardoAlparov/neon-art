@@ -1,16 +1,17 @@
 .page-footer {
     background: #292933;
     color: white;
-    padding-top: 6rem;
 
+    
+}
+
+.page-footer__content {
+    padding-top: 6rem;
     @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
         padding-top: 5rem;
         padding-bottom: 5rem;
-
-        .container {
-            display: flex;
-            flex-direction: column;
-        }
     }
 }
 
@@ -366,8 +367,6 @@
     &[href] {
         @include currentColorLineHover();
     }
-
-    
 }
 
 .page-footer__offices {
@@ -441,5 +440,98 @@
         svg {
             fill: white;
         }
+    }
+}
+
+.page-footer__selected-links {
+    padding-left: var(--sidebar-width, 0);
+    padding-top: 3rem;
+}
+
+.page-footer__selected-links-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 2rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+.page-footer__selected-links-card {
+    position: relative;
+    z-index: 10;
+    padding: 2.6rem 3.2rem;
+    z-index: 1;
+    min-height: 26rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include breakpoint(mobile) {
+        padding: 1.8rem;
+        min-height: 16rem;
+    }
+
+    .no-touch &:hover {
+        .page-footer__selected-links-card-bg-image {
+            transform: scale(1.05);
+            transition: transform 1s ease-out;
+        }
+    }
+}
+
+.page-footer__selected-links-card-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(0deg, rgba(41, 41, 51, 0.7), rgba(41, 41, 51, 0.7));
+    }
+}
+
+.page-footer__selected-links-card-bg-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s;
+}
+
+.page-footer__selected-links-card-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    svg {
+        width: 3.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        margin-left: 2rem;
+        fill: currentColor;
+    }
+}
+
+.page-footer__selected-links-card-title {
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 130%;
+
+    @include breakpoint(mobile) {
+        font-size: 2.2rem;
     }
 }

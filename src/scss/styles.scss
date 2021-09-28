@@ -2,10 +2,13 @@
 @import 'mixins';
 @import 'global';
 @import 'layout';
+@import 'page-header';
+@import 'page-footer';
 @import 'animations';
 @import 'section-heading';
 @import 'button-with-arrow';
 @import 'slider-arrows';
+@import 'slider-pagination';
 @import 'press-center';
 @import 'services';
 @import 'numbers';
@@ -30,10 +33,5 @@
 @import 'products-slider';
 @import 'photo-with-details';
 @import 'case-video';
-
-
-
-
-
-
-
+@import 'case-realised-projects';
+@import 'contact-form';

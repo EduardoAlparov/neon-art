@@ -38,11 +38,14 @@ import imagesLoaded from 'imagesloaded';
 
 import projectsParallax from './projectsParallax';
 import hideSideNav from './hideSideNav';
-
+import axios from 'axios';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import historyStickyDates from './historyStickyDates';
 import servicesEqualHeight from './servicesEqualHeight';
+import loadMoreProjects from './loadMoreProjects';
+import photoSlider from './photoSlider';
+import caseRealisedProjects from './caseRealisedProjects';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -78,7 +81,9 @@ document.addEventListener('DOMContentLoaded', function() {
     projectsParallax();
     historyStickyDates();
     servicesEqualHeight();
-
+    loadMoreProjects();
+    photoSlider();
+    caseRealisedProjects();
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));
     function onAlways() {
         ScrollTrigger.refresh();
@@ -93,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     imgLoad.on('always', onAlways);
+
+    window.axios = axios;
 
     document.addEventListener('lazyloaded', () => {
         ScrollTrigger.refresh();

@@ -40,6 +40,12 @@
     top: 6rem;
     right: 0;
     z-index: 10;
+
+    @include breakpoint(mobile) {
+        left: 2rem;
+        top: 1.5rem;
+        right: 2rem;
+    }
 }
 
 .photo-with-details__text-content {
@@ -47,5 +53,5 @@
     font-size: 1.6rem;
     line-height: 160%;
     text-transform: lowercase;
-    max-width: 52rem;
+    max-width: 75rem;
 }
