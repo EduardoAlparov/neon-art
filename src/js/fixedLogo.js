@@ -24,4 +24,8 @@ export default function fixedLogo() {
     window.addEventListener('resize', () => {
         setFixed();
     });
+
+    window.addEventListener('load', () => {
+        setFixed();
+    });
 }
