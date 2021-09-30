@@ -1,8 +1,6 @@
 .page-footer {
     background: #292933;
     color: white;
-
-    
 }
 
 .page-footer__content {
@@ -467,10 +465,12 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
+    position: relative;
+    padding-top: 6rem;
     @include breakpoint(mobile) {
         padding: 1.8rem;
         min-height: 16rem;
+        padding-top: 3.7rem;
     }
 
     .no-touch &:hover {
@@ -514,7 +514,7 @@
 
 .page-footer__selected-links-card-row {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 
     svg {
@@ -523,6 +523,7 @@
         flex-shrink: 0;
         margin-left: 2rem;
         fill: currentColor;
+        margin-bottom: 0.7rem;
     }
 }
 
@@ -533,5 +534,24 @@
 
     @include breakpoint(mobile) {
         font-size: 2.2rem;
+    }
+}
+
+.page-footer__selected-links-category {
+    position: absolute;
+    left: 3.2rem;
+    right: 3.2rem;
+    top: 2rem;
+    z-index: 10;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 130%;
+    text-transform: lowercase;
+
+    @include breakpoint(mobile) {
+        left: 1.8rem;
+        right: 1.8rem;
+        top: 1rem;
+        font-size: 1.4rem;
     }
 }

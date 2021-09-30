@@ -10,12 +10,14 @@ export default function fixedLogo() {
         introLogo.style.zIndex = 300;
         introLogo.classList.add('fixed');
         introLogo.style.transform = 'none';
+        introLogo.parentElement.style.paddingTop = '';
         requestAnimationFrame(() => {
             const newTop = introLogo.getBoundingClientRect().top;
             const newLeft = introLogo.getBoundingClientRect().left;
             introLogo.style.top = `${newTop}px`;
             introLogo.style.left = `${newLeft}px`;
             introLogo.style.transform = '';
+            introLogo.parentElement.style.paddingTop = introLogo.offsetHeight + 'px';
         });
     };
 

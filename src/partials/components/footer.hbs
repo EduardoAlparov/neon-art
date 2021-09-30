@@ -1,6 +1,53 @@
 <footer class="page-footer">
     <div class="container">
         {{#unless noSelectedLinks }}
+
+        {{#if newsSingle}}
+        <div class="page-footer__selected-links">
+            <ul class="page-footer__selected-links-list">
+                <li class="page-footer__selected-links-list-item">
+                    <a href="#" class="page-footer__selected-links-card">
+                        <div class="page-footer__selected-links-card-bg">
+                            <img data-src="img/prev-news.jpg" alt=""
+                                class="page-footer__selected-links-card-bg-image lazyload">
+                        </div>
+                        <div class="page-footer__selected-links-category">
+                            предыдущая новость
+                        </div>
+                        <div class="page-footer__selected-links-card-row">
+                            <h4 class="page-footer__selected-links-card-title">
+                                Парковочные пилоны&nbsp;индикации свободных мест
+                            </h4>
+
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+                <li class="page-footer__selected-links-list-item">
+                    <a href="#" class="page-footer__selected-links-card">
+                        <div class="page-footer__selected-links-card-bg">
+                            <img data-src="img/next-news.jpg" alt=""
+                                class="page-footer__selected-links-card-bg-image lazyload">
+                        </div>
+                        <div class="page-footer__selected-links-category">
+                            следующая новость
+                        </div>
+                        <div class="page-footer__selected-links-card-row">
+                            <h4 class="page-footer__selected-links-card-title">
+                                Входная группа для&nbsp;ресторана&nbsp;Adriana
+                            </h4>
+
+                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        {{else}}
         <div class="page-footer__selected-links">
             <ul class="page-footer__selected-links-list">
                 <li class="page-footer__selected-links-list-item">
@@ -39,6 +86,8 @@
                 </li>
             </ul>
         </div>
+        {{/if}}
+
         {{/unless}}
 
         <div class="page-footer__content">
