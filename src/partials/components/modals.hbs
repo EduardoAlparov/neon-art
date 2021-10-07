@@ -1,0 +1,106 @@
+<div class="contact-modal js-modal" id="contact-modal">
+    <div class="contact-modal__inner">
+        <button class="contact-modal__close js-close-modal">
+            <svg width="14" height="14" aria-hidden="true" class="icon-cross">
+                <use xlink:href="#cross"></use>
+            </svg>
+        </button>
+        <ul class="contact-modal__social-list">
+            <li class="contact-modal__social-list-item">
+                <a href="#" class="contact-modal__social-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-youtube">
+                        <use xlink:href="#youtube"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="contact-modal__social-list-item">
+                <a href="#" class="contact-modal__social-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-instagram">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="contact-modal__social-list-item">
+                <a href="#" class="contact-modal__social-link">
+                    <svg width="14" height="14" aria-hidden="true" class="icon-facebook">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <h2 class="section-heading contact-modal__heading">
+            Выберите способ связи
+        </h2>
+        <div class="contact-modal__phones">
+            <div class="contact-modal__phone">
+                <a href="tel:+78432926211" class="contact-modal__phone-link">
+                    <span>
+                        +7 (843) 292-62-11
+                    </span>
+                </a>
+                <div class="contact-modal__phone-title">
+                    офис
+                </div>
+            </div>
+            <div class="contact-modal__phone">
+                <a href="tel:+79872251760" class="contact-modal__phone-link">
+                    <span>
+                        +7 (987) 225-17-60
+                    </span>
+                </a>
+                <div class="contact-modal__phone-title">
+                    контрактное производство
+                </div>
+            </div>
+        </div>
+        <div class="contact-modal__write">
+            <a href="#" class="contact-modal__write-link">
+                <svg width="14" height="14" aria-hidden="true" class="icon-telegram">
+                    <use xlink:href="#telegram"></use>
+                </svg>
+                написать в Telegram
+            </a>
+            <a href="#" class="contact-modal__write-link">
+                <svg width="14" height="14" aria-hidden="true" class="icon-whatsapp">
+                    <use xlink:href="#whatsapp"></use>
+                </svg>
+                написать в Whatsapp
+            </a>
+        </div>
+        <a href="mailto:reception@neonart.ru" class="contact-modal__email-link"><span>reception@neonart.ru</span></a>
+        <form action="/" method="POST" class="contact-modal__form" id="modal-contact-form" data-need-validation="">
+            <h3 class="contact-modal__form-heading">
+                Остались вопросы?
+                Давайте мы вам перезвоним
+            </h3>
+            <div class="contact-modal__form-fields">
+                <div class="contact-modal__form-field">
+                    <input type="text" class="contact-modal__form-input" placeholder="имя" required>
+                </div>
+                <div class="contact-modal__form-field">
+                    <input type="text" class="contact-modal__form-input js-phone-input" placeholder="телефон" required
+                        data-parsley-phone="">
+                </div>
+            </div>
+            <button class="contact-modal__form-submit" type="submit">
+                <span>
+                    отправить
+                </span>
+
+                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right-fat">
+                    <use xlink:href="#arrow-right-fat"></use>
+                </svg>
+            </button>
+        </form>
+        <div class="contact-modal__policy">
+            <p>
+                нажимая кнопку вы даете согласие на обработку ваших персональных данных и соглашаетесь с <a href="#">
+                    <span>
+                        политикой конфиденциальности
+                    </span>
+
+                </a>
+            </p>
+        </div>
+    </div>
+</div>

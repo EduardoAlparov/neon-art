@@ -94,6 +94,10 @@
         }
     }
 
+    .modal-open & {
+        padding-right: var(--sb-width, 0);
+    }
+
     .menu-open & {
         padding-right: var(--sb-width, 0);
 

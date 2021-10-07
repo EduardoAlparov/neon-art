@@ -4,8 +4,9 @@
     color: white;
     position: relative;
     z-index: 40;
-
+    backface-visibility: hidden;
     overflow: hidden;
+    transform: translateZ(0);
 
     // @include breakpoint(mobile) {
     //     margin-bottom: 5rem;

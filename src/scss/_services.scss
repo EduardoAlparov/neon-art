@@ -165,12 +165,11 @@
 
 .services__card-title {
     margin-top: auto;
-    max-width: 29rem;
     font-weight: 300;
     font-size: 4.4rem;
     line-height: 120%;
     text-transform: lowercase;
-
+    max-width: 40rem;
     a {
         @include redLineHover();
     }
@@ -178,7 +177,8 @@
     @include breakpoint(mobile) {
         font-size: 2rem;
         line-height: 120%;
-        max-width: 20rem;
+        max-width: 25rem;
+       
     }
 }
 
