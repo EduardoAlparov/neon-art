@@ -27,7 +27,7 @@ export default function fixedLogo() {
         setFixed();
     });
 
-    window.addEventListener('load', () => {
-        setFixed();
-    });
+    // window.addEventListener('load', () => {
+    //     setFixed();
+    // });
 }
