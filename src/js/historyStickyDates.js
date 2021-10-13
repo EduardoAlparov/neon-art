@@ -16,7 +16,8 @@ export default function historyStickyDates() {
             markers: false,
             end: () => `+=${element.querySelector('.history__block-content').offsetHeight - date.offsetHeight}`,
             pin: date,
-            pinSpacing: true
+            pinSpacing: true,
+            toggleClass: "active"
         });
     });
 }
