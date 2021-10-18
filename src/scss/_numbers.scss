@@ -73,6 +73,13 @@
         }
     }
 
+    @include breakpoint(tablet) {
+        font-size: 10.6rem;
+    }
+    @include breakpoint(small-tablet) {
+        font-size: 7.5rem;
+    }
+
     @include breakpoint(mobile) {
         font-weight: 300;
         font-size: 8rem;
