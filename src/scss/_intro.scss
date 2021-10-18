@@ -1,16 +1,20 @@
 .intro {
-    // margin-bottom: 9rem;
     background: #292933;
     color: white;
     position: relative;
     z-index: 40;
+}
+
+.intro__bg-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
     backface-visibility: hidden;
     overflow: hidden;
     transform: translateZ(0);
-
-    // @include breakpoint(mobile) {
-    //     margin-bottom: 5rem;
-    // }
 }
 
 .intro__bg {
@@ -197,16 +201,22 @@
 }
 
 .intro__logo-wrapper-inner {
-    overflow: hidden;
-    transition: transform 0.4s;
+    // overflow: hidden;
+    // transition: transform 0.4s;
 
     @include breakpoint(mobile) {
         display: none;
     }
+}
+
+.intro__logo-hide-wrapper {
+    overflow: hidden;
+    transition: transform 0.4s;
 
     @include breakpointMF(small-tablet) {
-        body.page-header-hidden:not(.menu-open) &.fixed {
+        body.page-header-hidden:not(.menu-open) .intro__logo-wrapper-inner.fixed & {
             transform: translateY(-7.2rem);
+            // transform: translateY(-17rem);
         }
     }
 }
@@ -219,6 +229,7 @@
     .animatable & {
         transform: translateY(0%);
     }
+
 
     .no-touch &:hover {
         svg.intro__logo-image {

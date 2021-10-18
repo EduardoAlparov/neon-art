@@ -86,10 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
     loadMoreNews();
     photoSlider();
     caseRealisedProjects();
+    fixedLogo();
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));
     function onAlways() {
         ScrollTrigger.refresh();
-        fixedLogo();
+        
 
         const sideMenu = document.querySelector('.side-menu');
         if (sideMenu && window.matchMedia('(min-width: 641px)').matches) {
