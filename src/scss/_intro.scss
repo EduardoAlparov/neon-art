@@ -45,6 +45,13 @@
         background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 6.44%, rgba(0, 0, 0, 0) 78.21%);
     }
 
+
+    &--no-overlay {
+        &::after {
+            display: none;
+        }
+    }
+
     &--light-overlay {
         &::after {
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 5.78%, rgba(0, 0, 0, 0) 70.1%);
