@@ -121,8 +121,6 @@
     }
 }
 
-
-
 .contacts__mail-link {
     font-weight: 500;
     font-size: 1.2rem;
@@ -245,6 +243,9 @@
         margin-top: 0.7rem;
         font-size: 1.2rem;
         line-height: 1.2;
+        text-transform: lowercase;
+        text-align: right;
+        color: var(--primary-color);
     }
 }
 
@@ -414,4 +415,91 @@
     }
 
     @include redLineHover();
+}
+
+.contacts__form-layers {
+    position: relative;
+}
+
+.contacts__form-layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    &.active {
+        position: relative;
+        z-index: 10;
+        opacity: 1;
+        visibility: inherit;
+        transition: opacity 0.4s, visibility 0.4s;
+    }
+}
+
+.contacts__form-success {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(#ffffff, 0.1);
+    min-height: 19rem;
+    @include breakpoint(mobile) {
+        min-height: 19rem;
+    }
+}
+
+.contacts__form-success-heading {
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 130%;
+    text-transform: lowercase;
+    margin-bottom: .8rem;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.contacts__form-success-text {
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 130%;
+    max-width: 22rem;
+    color: rgba(white, 0.4);
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+    }
+}
+.contacts__form-success-back-link {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: .9rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 130%;
+    color: rgba(white, 0.4);
+    width: 100%;
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        bottom: .6rem;
+    }
+
+    &:link,
+    &:visited {
+        color: rgba(white, 0.4);
+    }
+
+    .no-touch &:hover,
+    .tocuh &:active {
+        color: white;
+    }
 }

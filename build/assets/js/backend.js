@@ -100,4 +100,35 @@ document.addEventListener('DOMContentLoaded', () => {
             successLayer.classList.remove('active');
         });
     });
+
+    const contactUsForms = Array.from(document.querySelectorAll('.contacts__write-us'));
+
+    contactUsForms.forEach(element => {
+        const form = element.querySelector('form');
+        const formLayer = element.querySelector('.contacts__form-layer--form');
+        const successLayer = element.querySelector('.contacts__form-layer--success');
+        const backBtn = element.querySelector('.contacts__form-success-back-link');
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            if (
+                $(form)
+                    .parsley()
+                    .isValid()
+            ) {
+                form.reset();
+                $(form)
+                    .parsley()
+                    .reset();
+                formLayer.classList.remove('active');
+                successLayer.classList.add('active');
+            }
+        });
+
+        backBtn.addEventListener('click', event => {
+            event.preventDefault();
+            formLayer.classList.add('active');
+            successLayer.classList.remove('active');
+        });
+    });
 });

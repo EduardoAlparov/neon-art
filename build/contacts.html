@@ -789,30 +789,50 @@
                     </ul>
                 </div>
                 <div class="contacts__write-us">
-                    <form action="/" method="POST" class="contacts__form" data-need-validation="">
-                        <h3 class="contacts__form-heading">
-                            Остались вопросы?
-                            Давайте мы вам перезвоним
-                        </h3>
-                        <div class="contacts__form-fields">
-                            <div class="contacts__form-field">
-                                <input type="text" class="contacts__form-input" placeholder="имя" required>
-                            </div>
-                            <div class="contacts__form-field">
-                                <input type="tel" class="contacts__form-input js-phone-input" placeholder="телефон"
-                                    required data-parsley-phone>
+                    <div class="contacts__form-layers">
+                        <div class="contacts__form-layer contacts__form-layer--form active">
+                            <form action="/" method="POST" class="contacts__form" data-need-validation="">
+                                <h3 class="contacts__form-heading">
+                                    Остались вопросы?
+                                    Давайте мы вам перезвоним
+                                </h3>
+                                <div class="contacts__form-fields">
+                                    <div class="contacts__form-field">
+                                        <input type="text" class="contacts__form-input" placeholder="имя" required>
+                                    </div>
+                                    <div class="contacts__form-field">
+                                        <input type="tel" class="contacts__form-input js-phone-input"
+                                            placeholder="телефон" required data-parsley-phone>
+                                    </div>
+                                </div>
+                                <button type="submit" class="contacts__form-submit">
+                                    <span>
+                                        отправить
+                                    </span>
+
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                        <use xlink:href="#arrow-right-fat"></use>
+                                    </svg>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="contacts__form-layer contacts__form-layer--success">
+                            <div class="contacts__form-success">
+                                <h3 class="contacts__form-success-heading">
+                                    Спасибо за вашу заявку!
+                                </h3>
+                                <div class="contacts__form-success-text">
+                                    <p>
+                                        наш менеджер свяжется с вами в ближайшее время
+                                    </p>
+                                </div>
+                                <a href="#" class="contacts__form-success-back-link">
+                                    отправить повторно
+                                </a>
                             </div>
                         </div>
-                        <button type="submit" class="contacts__form-submit">
-                            <span>
-                                отправить
-                            </span>
+                    </div>
 
-                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
-                                <use xlink:href="#arrow-right-fat"></use>
-                            </svg>
-                        </button>
-                    </form>
                     <div class="contacts__write-us-policy">
                         нажимая кнопку вы даете согласие на обработку ваших персональных данных и соглашаетесь с <a
                             href="#">

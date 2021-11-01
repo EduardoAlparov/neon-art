@@ -169,58 +169,85 @@
             </h2>
             <div class="contact-form__row">
                 <div class="contact-form__col">
-                    <form action="/" method="POST" class="contact-form__form" data-need-validation="" id="contact-form">
-                        <div class="contact-form__fields">
-                            <div class="contact-form__field contact-form__field--wide" id="subject-select">
-                                <select name="subject" class="js-custom-select" required
-                                    data-parsley-errors-container="#subject-select"
-                                    data-parsley-class-handler="#subject-select" data-parsley-trigger="change">
-                                    <option value="" placeholder>
-                                        выбрать тему сообщения
-                                    </option>
-                                    <option value="1">Тема 1</option>
-                                    <option value="2">Тема 2</option>
-                                    <option value="3">Тема 3</option>
-                                </select>
-                            </div>
-                            <div class="contact-form__field">
-                                <input type="text" class="contact-form__input" placeholder="ваши имя и фамилия"
-                                    required>
-                            </div>
-                            <div class="contact-form__field">
-                                <input type="text" class="contact-form__input" placeholder="компания" required>
-                            </div>
-                            <div class="contact-form__field contact-form__field--wide">
-                                <input type="tel" class="contact-form__input js-phone-input" placeholder="телефон"
-                                    required data-parsley-phone="">
-                            </div>
-                            <div class="contact-form__field contact-form__field--wide">
-                                <textarea name="comment" class="contact-form__input"
-                                    placeholder="текст сообщения"></textarea>
+                    <div class="contact-form__layers">
+                        <div class="contact-form__layer contact-form__layer--form active">
+                            <form action="/" method="POST" class="contact-form__form" data-need-validation=""
+                                id="contact-form">
+                                <div class="contact-form__fields">
+                                    <div class="contact-form__field contact-form__field--wide" id="subject-select">
+                                        <select name="subject" class="js-custom-select"
+                                            data-parsley-errors-container="#subject-select"
+                                            data-parsley-class-handler="#subject-select" data-parsley-trigger="change">
+                                            <option value="" placeholder>
+                                                выбрать тему сообщения
+                                            </option>
+                                            <option value="1">Тема 1</option>
+                                            <option value="2">Тема 2</option>
+                                            <option value="3">Тема 3</option>
+                                        </select>
+                                    </div>
+                                    <div class="contact-form__field">
+                                        <input type="text" class="contact-form__input" placeholder="ваши имя и фамилия"
+                                            required>
+                                    </div>
+                                    <div class="contact-form__field">
+                                        <input type="text" class="contact-form__input" placeholder="компания">
+                                    </div>
+                                    <div class="contact-form__field contact-form__field--wide">
+                                        <input type="tel" class="contact-form__input js-phone-input"
+                                            placeholder="телефон" required data-parsley-phone="">
+                                    </div>
+                                    <div class="contact-form__field contact-form__field--wide">
+                                        <textarea name="comment" class="contact-form__input"
+                                            placeholder="текст сообщения"></textarea>
+                                    </div>
+                                </div>
+                                <div class="contact-form__file-bottom-row">
+                                    <div class="contact-form__file-legend">
+                                        обязательное поле
+                                    </div>
+                                    <label class="contact-form__file-upload js-file-upload">
+                                        <input type="file" class="contact-form__file-upload-input">
+                                        <span class="contact-form__file-upload-text js-file-upload-text">
+                                            прикрепить файл
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true" class="icon-file">
+                                            <use xlink:href="#file"></use>
+                                        </svg>
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="contact-form__submit">
+                                    <span>
+                                        Отправить сообщение
+                                    </span>
+                                    <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
+                                        <use xlink:href="#arrow-right"></use>
+                                    </svg>
+                                </button>
+                                <div class="contact-form__policy">
+                                    нажимая кнопку вы даете согласие на обработку ваших персональнх данных и
+                                    соглашаетесь с <a href="#"><span>политикой конфиденциальности</span></a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="contact-form__layer contact-form__layer--success">
+                            <div class="contact-form__success">
+                                <h3 class="contact-form__success-heading">
+                                    Спасибо за вашу заявку!
+                                </h3>
+                                <div class="contact-form__success-text">
+                                    <p>
+                                        наш менеджер свяжется с вами в ближайшее время
+                                    </p>
+                                </div>
+                                <a href="#" class="contact-form__back-link">
+                                    отправить повторно
+                                </a>
                             </div>
                         </div>
-                        <label class="contact-form__file-upload js-file-upload">
-                            <input type="file" class="contact-form__file-upload-input">
-                            <span class="contact-form__file-upload-text js-file-upload-text">
-                                прикрепить файл
-                            </span>
-                            <svg width="14" height="14" aria-hidden="true" class="icon-file">
-                                <use xlink:href="#file"></use>
-                            </svg>
-                        </label>
-                        <button type="submit" class="contact-form__submit">
-                            <span>
-                                Отправить сообщение
-                            </span>
-                            <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right">
-                                <use xlink:href="#arrow-right"></use>
-                            </svg>
-                        </button>
-                        <div class="contact-form__policy">
-                            нажимая кнопку вы даете согласие на обработку ваших персональнх данных и соглашаетесь с <a
-                                href="#"><span>политикой конфиденциальности</span></a>
-                        </div>
-                    </form>
+                    </div>
+
                 </div>
                 <div class="contact-form__col">
                     <h3 class="contact-form__secondary-heading">
