@@ -1294,30 +1294,51 @@
                     </a>
                 </div>
                 <a href="mailto:reception@neonart.ru" class="contact-modal__email-link"><span>reception@neonart.ru</span></a>
-                <form action="/" method="POST" class="contact-modal__form" id="modal-contact-form" data-need-validation="">
-                    <h3 class="contact-modal__form-heading">
-                        Остались вопросы?
-                        Давайте мы вам перезвоним
-                    </h3>
-                    <div class="contact-modal__form-fields">
-                        <div class="contact-modal__form-field">
-                            <input type="text" class="contact-modal__form-input" placeholder="имя" required>
-                        </div>
-                        <div class="contact-modal__form-field">
-                            <input type="text" class="contact-modal__form-input js-phone-input" placeholder="телефон" required
-                                data-parsley-phone="">
+                <div class="modal-contact-form__layers">
+                    <div class="modal-contact-form__layer modal-contact-form__layer--form active">
+                        <form action="/" method="POST" class="contact-modal__form" id="modal-contact-form"
+                            data-need-validation="">
+                            <h3 class="contact-modal__form-heading">
+                                Остались вопросы?
+                                Давайте мы вам перезвоним
+                            </h3>
+                            <div class="contact-modal__form-fields">
+                                <div class="contact-modal__form-field">
+                                    <input type="text" class="contact-modal__form-input" placeholder="имя" required>
+                                </div>
+                                <div class="contact-modal__form-field">
+                                    <input type="text" class="contact-modal__form-input js-phone-input" placeholder="телефон"
+                                        required data-parsley-phone="">
+                                </div>
+                            </div>
+                            <button class="contact-modal__form-submit" type="submit">
+                                <span>
+                                    отправить
+                                </span>
+        
+                                <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right-fat">
+                                    <use xlink:href="#arrow-right-fat"></use>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="modal-contact-form__layer modal-contact-form__layer--success">
+                        <div class="modal-contact-form__success">
+                            <h3 class="modal-contact-form__success-heading">
+                                Спасибо за вашу заявку!
+                            </h3>
+                            <div class="modal-contact-form__success-text">
+                                <p>
+                                    наш менеджер свяжется с вами в ближайшее время
+                                </p>
+                            </div>
+                            <a href="#" class="modal-contact-form__success-link">
+                                отправить повторно
+                            </a>
                         </div>
                     </div>
-                    <button class="contact-modal__form-submit" type="submit">
-                        <span>
-                            отправить
-                        </span>
+                </div>
         
-                        <svg width="14" height="14" aria-hidden="true" class="icon-arrow-right-fat">
-                            <use xlink:href="#arrow-right-fat"></use>
-                        </svg>
-                    </button>
-                </form>
                 <div class="contact-modal__policy">
                     <p>
                         нажимая кнопку вы даете согласие на обработку ваших персональных данных и соглашаетесь с <a href="#">

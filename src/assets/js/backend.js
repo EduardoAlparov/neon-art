@@ -131,4 +131,35 @@ document.addEventListener('DOMContentLoaded', () => {
             successLayer.classList.remove('active');
         });
     });
+
+    const contactModals = Array.from(document.querySelectorAll('.contact-modal'));
+
+    contactModals.forEach(element => {
+        const form = element.querySelector('form');
+        const formLayer = element.querySelector('.modal-contact-form__layer--form');
+        const successLayer = element.querySelector('.modal-contact-form__layer--success');
+        const backBtn = element.querySelector('.modal-contact-form__success-link');
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            if (
+                $(form)
+                    .parsley()
+                    .isValid()
+            ) {
+                form.reset();
+                $(form)
+                    .parsley()
+                    .reset();
+                formLayer.classList.remove('active');
+                successLayer.classList.add('active');
+            }
+        });
+
+        backBtn.addEventListener('click', event => {
+            event.preventDefault();
+            formLayer.classList.add('active');
+            successLayer.classList.remove('active');
+        });
+    });
 });
