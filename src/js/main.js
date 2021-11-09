@@ -47,6 +47,7 @@ import loadMoreProjects from './loadMoreProjects';
 import photoSlider from './photoSlider';
 import caseRealisedProjects from './caseRealisedProjects';
 import loadMoreNews from './loadMoreNews';
+import newsFixedSidebar from './newsFixedSidebar';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -87,6 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
     photoSlider();
     caseRealisedProjects();
     fixedLogo();
+    newsFixedSidebar();
     let imgLoad = imagesLoaded(document.querySelector('.page-content'));
     function onAlways() {
         ScrollTrigger.refresh();
