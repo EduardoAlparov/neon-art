@@ -94,11 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        backBtn.addEventListener('click', event => {
-            event.preventDefault();
-            formLayer.classList.add('active');
-            successLayer.classList.remove('active');
-        });
+        if (backBtn) {
+            backBtn.addEventListener('click', event => {
+                event.preventDefault();
+                formLayer.classList.add('active');
+                successLayer.classList.remove('active');
+            });
+        }
     });
 
     const contactUsForms = Array.from(document.querySelectorAll('.contacts__write-us'));
@@ -125,11 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        backBtn.addEventListener('click', event => {
-            event.preventDefault();
-            formLayer.classList.add('active');
-            successLayer.classList.remove('active');
-        });
+        if (backBtn) {
+            backBtn.addEventListener('click', event => {
+                event.preventDefault();
+                formLayer.classList.add('active');
+                successLayer.classList.remove('active');
+            });
+        }
     });
 
     const contactModals = Array.from(document.querySelectorAll('.contact-modal'));
@@ -156,10 +160,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        backBtn.addEventListener('click', event => {
-            event.preventDefault();
-            formLayer.classList.add('active');
-            successLayer.classList.remove('active');
-        });
+        if (backBtn) {
+            backBtn.addEventListener('click', event => {
+                event.preventDefault();
+                formLayer.classList.add('active');
+                successLayer.classList.remove('active');
+            });
+        }
     });
 });

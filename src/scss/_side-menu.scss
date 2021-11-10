@@ -108,4 +108,8 @@
 
 [data-midnight='light'] + [data-midnight='light'] {
     padding-top: 0;
+
+    section {
+        padding-top: 0;
+    }
 }

@@ -48,6 +48,7 @@ import photoSlider from './photoSlider';
 import caseRealisedProjects from './caseRealisedProjects';
 import loadMoreNews from './loadMoreNews';
 import newsFixedSidebar from './newsFixedSidebar';
+import fixSections from './fixSections';
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -58,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
     customSelects();
     masks();
     fileUpload();
+    fixSections();
     anchorLinks();
     accordions();
     mediaPlayer();

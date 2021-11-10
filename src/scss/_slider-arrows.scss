@@ -20,6 +20,13 @@
         transition: fill .2s;
     }
 
+
+    body.dark & {
+        svg {
+            fill: rgba(white, 0.4);
+        }
+    }
+
     &--light {
         svg {
             fill: white;
