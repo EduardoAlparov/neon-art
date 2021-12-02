@@ -1,7 +1,9 @@
 @import 'vendor';
 @import 'mixins';
+@import 'fontface';
 @import 'global';
 @import 'layout';
+
 @import 'page-header';
 @import 'page-footer';
 @import 'animations';
@@ -44,3 +46,4 @@
 @import 'search';
 @import 'contact-modal';
 @import 'not-found';
+@import 'fontface';

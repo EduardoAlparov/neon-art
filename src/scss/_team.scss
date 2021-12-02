@@ -263,3 +263,56 @@
         margin-left: auto;
     }
 }
+
+.team__join-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    text-align: center;
+    color: rgba(white, 0.4);
+
+    &:link,
+    &:visited {
+        color: rgba(white, 0.4);
+    }
+
+    .no-touch &:hover,
+    .touch &:active {
+        color: white;
+    }
+}
+
+.team__join-card-icon {
+    margin-bottom: 1.5rem;
+    font-size: 7rem;
+    line-height: 1;
+    font-family: 'fontello';
+
+    @include breakpoint(mobile) {
+        font-size: 5rem;
+        margin-bottom: 1rem;
+    }
+    &::before {
+        content: '\e812';
+        font-style: normal;
+        font-weight: normal;
+       
+        display: inline-block;
+        text-decoration: inherit;
+        font-variant: normal;
+        text-transform: none;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.team__join-card-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 300;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+    }
+}
