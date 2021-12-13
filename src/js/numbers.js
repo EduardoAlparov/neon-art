@@ -27,8 +27,8 @@ export default function slidingText() {
                 tl.from(lineChild, {
                     autoAlpha: 0,
                     yPercent: 100,
-                    stagger: 0.2,
-                    duration: 0.5
+                    stagger: 0.1,
+                    duration: 0.35
                 });
             }
         });
