@@ -373,7 +373,7 @@
   }
 
   &__text {
-    max-width: 360px;
+    max-width: 36rem;
     font-weight: 300;
     font-size: 1.6rem;
     line-height: 160%;
@@ -495,7 +495,7 @@
       background-color: var(--bg-color);
 
       .vacancies-opened__column {
-   
+
         &:nth-child(1) {
           padding-left: 2rem;
 
@@ -520,7 +520,7 @@
       background-color: var(--bg-color);
 
       .vacancies-opened__column {
-   
+
         &:nth-child(1) {
           padding-left: 2rem;
 
@@ -645,7 +645,7 @@
       margin-left: auto;
     }
   }
-  
+
   &__pagination {
     display: flex;
     align-items: center;
@@ -698,7 +698,7 @@
         text-decoration: underline;
       }
     }
-    
+
     @include breakpoint(small-tablet) {
       margin-bottom: 28px;
     }
@@ -761,7 +761,7 @@
       pointer-events: none;
     }
   }
-  
+
   &__button {
     transition: transform 0.3s ease-out;
 
@@ -783,7 +783,7 @@
     &--next {
 
       &:hover {
-        transform: scale(1.1) translateX(1rem);        
+        transform: scale(1.1) translateX(1rem);
       }
     }
 
@@ -961,7 +961,7 @@
 
         &:last-child {
           margin-bottom: 0;
-        }      
+        }
       }
     }
 
@@ -1104,7 +1104,7 @@
       background-color: var(--primary-color);
     }
   }
-  
+
   &__close-btn {
     position: absolute;
     top: 7.3rem;
@@ -1151,7 +1151,7 @@
     &::-webkit-scrollbar {
       display: none;
     }
-    
+
   }
 
   &__info-block {
@@ -1332,10 +1332,10 @@
     transition: color 0.3s;
   }
 
-  //lists: 
+  //lists:
   &__lists {
     margin-top: 3.2rem;
-  } 
+  }
 
   &__lists-item {
     margin-bottom: 3.2rem;
@@ -1396,7 +1396,7 @@
   &__contacts-item {
     @include breakpoint(small-tablet) {
       margin-bottom: 4px;
-  
+
       &:last-child {
         margin-bottom: 0;
       }
@@ -1411,8 +1411,8 @@
     transition: 0.3s ease-out;
 
     &--big {
-      font-size: 4.4rem;    
-      
+      font-size: 4.4rem;
+
       @include breakpoint(small-tablet) {
         font-size: 28px;
       }
@@ -1423,7 +1423,7 @@
       text-decoration: underline;
     }
   }
-  
+
   &__contacts-link-text {
     @include breakpoint(small-tablet) {
       display: block;
@@ -1577,7 +1577,7 @@
 
   &__agreement {
     flex-grow: 1;
-    
+
     & > * {
       display: inline;
       color: rgba(255, 255, 255, 0.5);
@@ -1607,7 +1607,7 @@
   border: 1px solid var(--white-color);
   border-radius: 100%;
   transition: border-color 0.3s ease-out;
-  
+
   .icon {
     width: 2.8rem;
     height: 2.8rem;
