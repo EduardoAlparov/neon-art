@@ -1,0 +1,69 @@
+.case-realised-projects {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        padding: 5rem 0;
+    }
+}
+
+.case-realised-projects__content {
+    padding-left: var(--sidebar-width, 0);
+}
+
+.case-realised-projects__heading {
+    margin-bottom: 5.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.case-realised-projects__slider {
+    @include breakpoint(mobile) {
+        .swiper-container {
+            overflow: visible;
+        }
+
+        .swiper-slide {
+            width: 32rem;
+        }
+
+        .realised-projects__catalog-card {
+            color: var(--text-color);
+            &:link,
+            &:visited {
+                color: var(--text-color);
+            }
+        }
+    }
+}
+
+.case-realised-projects__slider-controls {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        .slider-pagination {
+            display: none;
+        }
+
+        .slider-arrows {
+            margin-left: auto;
+        }
+    }
+}
+
+
+.case-realised-projects__show-more {
+    margin-top: 6rem;
+    @include breakpoint(mobile) {
+        margin-top: 4rem;
+    }
+}

@@ -1,0 +1,70 @@
+.button-with-arrow {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 120%;
+    
+    text-transform: lowercase;
+
+    transition: transform 0.4s ease 0.5s;
+    color: #afafaf;
+
+    &:link,
+    &:visited {
+        color: #afafaf;
+    }
+
+    @include breakpoint(mobile) {
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 120%;
+        
+    }
+
+    svg {
+        width: 3.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        fill: currentColor;
+        margin-left: 2.5rem;
+        margin-top: 0.5rem;
+
+        &.icon-share {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-top: .2rem;
+        }
+
+        @include breakpoint(mobile) {
+            width: 3.6rem;
+            height: 1.8rem;
+            margin-left: 2rem;
+            margin-top: 0.2rem;
+
+            &.icon-share {
+                width: 1.6rem;
+                height: 1.6rem;
+                margin-top: .2rem;
+            }
+        }
+    }
+
+  
+    .no-touch &:hover,
+    .touch &:active {
+        
+        .button-with-arrow__text-inner {
+            background-size: 100% 1px;
+        }
+    }
+}
+
+
+.button-with-arrow__text-inner {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    transition: background-size 0.25s ease-out;
+}

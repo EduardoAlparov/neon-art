@@ -1,0 +1,115 @@
+.company-history {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+
+    @include breakpoint(mobile) {
+        padding: 5rem 0;
+    }
+}
+
+.company-history__content {
+    padding-left: var(--sidebar-width, 0);
+
+    @include breakpoint(mobile) {
+        padding: 0;
+    }
+}
+
+.company-history__heading {
+    margin-bottom: 7.5rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 2rem;
+    }
+}
+
+.company-history__top-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 5rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.company-history__year {
+    font-weight: 300;
+    font-size: 11.6rem;
+    line-height: 100%;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+
+    @include breakpoint(mobile) {
+        margin: 0;
+       
+        font-size: 8rem;
+        line-height: 100%;
+        margin-bottom: .5rem;
+    }
+}
+
+.company-history__event {
+    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 140%;
+
+    @include breakpoint(mobile) {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+}
+
+.company-history__text {
+    font-size: 1.6rem;
+    line-height: 160%;
+    font-weight: 400;
+    max-width: 56rem;
+}
+
+
+.company-history__gallery {
+   
+    margin-bottom: 6rem;
+
+    .swiper-container {
+        overflow: visible;
+        margin: 0;
+    }
+
+    .swiper-wrapper {
+       
+
+        @include breakpointMF(small-tablet) {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-gap: 2rem;
+        }
+    }
+
+    .swiper-slide {
+        @include breakpoint(mobile) {
+            width: 31.5rem;
+        }
+    }
+}
+
+.company-history__gallery-image-wrapper {
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 56.25%;
+    }
+}
+
+.company-history__gallery-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

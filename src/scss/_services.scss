@@ -1,0 +1,197 @@
+.services {
+    padding-top: 9rem;
+    padding-bottom: 10rem;
+    background: #292933;
+    color: white;
+
+    @include breakpoint(mobile) {
+        padding-top: 5rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.services__content {
+    padding-left: var(--sidebar-width, 0);
+    @include breakpoint(mobile) {
+        padding-left: 0;
+    }
+}
+
+.services__heading {
+    max-width: 102rem;
+    margin-bottom: 9rem;
+    @include breakpoint(mobile) {
+        max-width: none;
+        margin-left: 0;
+        margin-bottom: 4.5rem;
+    }
+}
+
+.services__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2rem;
+    row-gap: 8rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        row-gap: 4rem;
+        margin: 0 calc(-1 * var(--content-padding));
+    }
+}
+
+.services__list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.services__card {
+    padding: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    z-index: 1;
+    min-height: 48rem;
+
+    @include breakpoint(mobile) {
+       
+        padding: 2rem var(--content-padding);
+        min-height: var(--equal-height, auto);
+    }
+    .no-touch &:hover {
+        .services__card-image-container::after {
+            opacity: 1;
+        }
+        .services__card-image-container::before {
+            opacity: 0;
+        }
+
+        .services__card-image {
+            transform: scale(1.05);
+            transition: transform 5s ease-out;
+        }
+
+        .services__card-link {
+            color: white;
+        }
+    }
+}
+
+.services__card-image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+
+    @include breakpointMF(small-tablet) {
+        &::before {
+            content: '';
+            position: absolute;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.35) 23.22%, rgba(0, 0, 0, 0) 58.27%);
+            z-index: 3;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.4s;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(black, 0.7);
+            opacity: 0;
+            z-index: 10;
+            transition: opacity 0.4s;
+        }
+    }
+
+    @include breakpoint(mobile) {
+        &::after {
+            content: '';
+            z-index: 10;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(41, 41, 51, 0.5), rgba(41, 41, 51, 0.5)),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.35) -2.93%, rgba(0, 0, 0, 0) 74.13%);
+        }
+    }
+}
+
+.services__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 3s ease-in;
+}
+
+.services__card-inner-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.services__card-inner-list-item {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 130%;
+    text-transform: lowercase;
+    color: rgba(white, 0.4);
+    transition: color 0.2s;
+    margin-bottom: 0.8rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0.5rem;
+        color: white;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.services__card-title {
+    margin-top: 2.8rem;
+    font-weight: 500;
+    font-size: 2.8rem;
+    line-height: 120%;
+    text-transform: lowercase;
+    
+    a {
+        @include redLineHover();
+    }
+
+    @include breakpoint(mobile) {
+        margin-top: 1.8rem;
+
+        font-size: 2rem;
+        line-height: 120%;
+
+        padding-left: var(--content-padding);
+    }
+}
+
+.services__card-link {
+    display: block;
+
+    @include redLineHover();
+}

@@ -1,0 +1,126 @@
+.case-made-by {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
+    @include breakpoint(mobile) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+}
+
+.case-made-by__content {
+    padding-left: var(--sidebar-width, 0);
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 130%;
+    @include breakpoint(mobile) {
+        font-size: 1.6rem;
+    }
+}
+
+.case-made-by__awards {
+    padding-bottom: 5rem;
+    border-bottom: 1px solid rgba(#363636, 0.2);
+    @include breakpoint(mobile) {
+        padding-bottom: 2.5rem;
+    }
+}
+
+.case-made-by__title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 130%;
+    text-transform: lowercase;
+    margin-bottom: 0.8rem;
+    color: rgba(#363636, 0.3);
+}
+
+.case-made-by__awards-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8rem;
+    row-gap: 4rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+}
+
+.case-made-by__awards-list-item {
+    margin-right: 8rem;
+
+    @include breakpoint(mobile) {
+        margin-right: 4rem;
+    }
+
+    @supports (gap: 8rem) {
+        margin: 0;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.case-made-by__bottom-row {
+    padding-top: 5rem;
+    display: flex;
+    align-items: flex-start;
+    @include breakpoint(mobile) {
+        padding-top: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.case-made-by__authors {
+    max-width: 80rem;
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+        max-width: none;
+    }
+}
+
+.case-made-by__authors-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 6rem;
+    grid-row-gap: 2.5rem;
+
+    @include breakpoint(mobile) {
+        grid-gap: 2rem;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+.case-made-by__date {
+    flex-shrink: 0;
+    margin-left: auto;
+    @include breakpoint(mobile) {
+        margin: 0;
+        flex-shrink: 0;
+        margin-top: 2rem;
+    }
+}
+
+.case-made-by__image {
+    display: block;
+    width: 100%;
+    margin-bottom: 6rem;
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.case-made-by__share {
+    margin-top: 9rem;
+    @include breakpoint(mobile) {
+        margin-top: 3rem;
+    }
+}
