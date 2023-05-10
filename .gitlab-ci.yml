@@ -14,7 +14,7 @@ Build:
         - global_stage
     script:
         - npm i
-        - npm run build:prod
+        - npm run build
     artifacts:
         paths:
             - build/
