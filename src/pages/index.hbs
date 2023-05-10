@@ -210,12 +210,9 @@
     </div>
 </section>
 
-
 <section class="services" data-midnight="dark">
     <div class="container">
         <div class="services__content">
-
-
             <h2 class="section-upper-heading section-upper-heading--light js-sliding-text">
                 направления
             </h2>
@@ -457,7 +454,6 @@
     </div>
 </section>
 
-
 <section class="projects" data-midnight="light">
     <div class="container">
 
@@ -570,6 +566,25 @@
                 <use xlink:href="#arrow-right"></use>
             </svg>
         </a>
+    </div>
+</section>
+
+<section class="vacancies-main" data-midnight="dark">
+    <div class="container">
+        <div class="intro__text-content vacancies-main__text-content">
+            <div class="vacancies-main__title vacancies-intro__title">
+                Присоединяйтесь к команде Неон-Арт!
+            </div>
+            
+            <div class="vacancies-intro__subtitle">
+                Получите возможность реализовать свой потенциал<br>
+                и достойно зарабатывать
+            </div>
+
+            <button type="button" class="vacancies-intro__button page-header__contact-btn js-vac-modal">
+                присоединиться к команде
+            </button>
+        </div>
     </div>
 </section>
 
@@ -688,6 +703,87 @@
         </div>
     </div>
 </section>
+
+<div class="vacancies-modal">
+    <div class="vacancies-modal__contianer">
+        <div class="vacancies-modal__content vacancies-modal__content--dark">
+            <div class="vacancies-modal__body">
+                <form class="vacancies-modal__form-block form-vacancies" action="#" data-need-validation="">
+                    <div class="form-vacancies__body">
+                        <span class="form-vacancies__title form-vacancies__title--bigger vacancies-modal__name">
+                            Откликнуться на<br> вакансию
+                        </span>
+
+                        <div class="form-vacancies__row">
+                            <input type="text" class="form-vacancies__input" placeholder="ваши имя и фамилия" required>
+                        </div>
+
+                        <div class="form-vacancies__row">
+                            <input type="text" class="form-vacancies__input js-phone-input" placeholder="телефон" required data-parsley-phone="">
+                        </div>
+
+                        <div class="form-vacancies__row">
+                            <input type="text" class="form-vacancies__input" placeholder="должность" required>
+                        </div>
+
+                        <div class="form-vacancies__loader">
+                            <label class="form-vacancies__loader-label">
+                                <svg aria-hidden="true" class="icon">
+                                    <use xlink:href="#paperclip"></use>
+                                </svg> 
+                                <span>
+                                    прикрепить резюме
+                                </span>
+                                <input class="visually-hidden form-vacancies__loader-input" type="file" hidden required>
+                            </label>
+                        </div>
+
+                        <div class="form-vacancies__submit">
+                            <button type="submit" class="form-vacancies__submit-btn page-header__contact-btn">
+                                отправить
+                            </button>
+
+                            <div class="form-vacancies__agreement">
+                                <span>
+                                    нажимая кнопку “отправить” вы даете согласие на<br>
+                                    обработку ваших персональных данных<br> и соглашаетесь с 
+                                </span>
+                                <a href="#" class="">
+                                    политикой&nbsp;конфиденциальности
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="vacancies-modal__contacts">
+                    <div class="vacancies-modal__contacts-title form-vacancies__agreement">
+                        Отдел кадров
+                    </div>
+
+                    <div class="vacancies-modal__contacts-list">
+                        <div class="vacancies-modal__contacts-item">
+                            <a href="tel:78432926211" class="vacancies-modal__contacts-link">
+                                +7 (843) 292-62-11 (доп. 367)
+                            </a>
+                        </div>
+                        <div class="vacancies-modal__contacts-item">
+                            <a href="mailto:hr@neonart.ru" class="vacancies-modal__contacts-link">
+                                hr@neonart.ru
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="vacancies-modal__close-btn vacancies-modal__close-btn--dark">
+                <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#close"></use>
+                </svg> 
+            </button>
+        </div>
+    </div>
+</div>
 
 
 {{/content}}

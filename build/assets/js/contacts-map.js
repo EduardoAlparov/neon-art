@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     coords: [55.804683, 49.041331],
                     title: 'производство',
                     content: `<div class="address">420030, г. Казань, ул. Набережная, 31 А</div>`,
-                    initiallyOpen: false
+                    initiallyOpen: true
                 },
                 {
                     coords: [55.797751, 49.109792],

@@ -223,6 +223,7 @@
     &.parsley-error {
         border-color: var(--primary-color);
     }
+
     @include placeholder {
         color: rgba(white, 0.3);
     }
@@ -269,6 +270,7 @@
     gap: 0.5rem;
     margin-left: auto;
     margin-bottom: 1.5rem;
+    
     @include breakpoint(mobile) {
         grid-gap: 0.8rem;
         margin-left: 0;

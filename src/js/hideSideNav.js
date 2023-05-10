@@ -20,4 +20,19 @@ export default function hideSideNav() {
             }
         }
     });
+
+    ScrollTrigger.create({
+        trigger: '.vacancies-contacts__map',
+        start: 'top bottom',
+      
+        markers: false,
+        end: 'bottom top',
+        onToggle: ({isActive}) => {
+            if (isActive) {
+                document.body.classList.add('hide-side-nav');
+            } else {
+                document.body.classList.remove('hide-side-nav');
+            }
+        }
+    });
 }

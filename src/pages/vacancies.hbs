@@ -1,0 +1,1086 @@
+{{#extend "layout"}}
+{{#content "main"}}
+
+<div class="side-menu side-menu--center">
+    <div class="container">
+        <div class="side-menu__content">
+            <div class="side-menu__panel">
+                <nav class="side-menu__nav js-sections-menu">
+                    <a href="#to-vacancies-intro" class="side-menu__nav-link js-sections-menu-link">
+                        <span>
+                            О вакансии
+                        </span>
+                    </a>
+                    <a href="#to-vacancies-values" class="side-menu__nav-link js-sections-menu-link">
+                        <span>
+                            Наши ценности
+                        </span>
+                    </a>
+                    <a href="#to-vacancies-advantages" class="side-menu__nav-link js-sections-menu-link">
+                        <span>
+                            Наши преимущества
+                        </span>
+                    </a>
+                    <a href="#to-vacancies-opened" class="side-menu__nav-link js-sections-menu-link">
+                        <span>
+                            вакансии
+                        </span>
+                    </a>
+                    <a href="#to-vacancies-reviews" class="side-menu__nav-link js-sections-menu-link">
+                        <span>
+                            отзывы
+                        </span>
+                    </a>
+                    <a href="#to-vacancies-contacts" class="side-menu__nav-link js-sections-menu-link">
+                        <span>
+                            контакты
+                        </span>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="intro vacancies-intro" data-midnight="dark" id="vacancies-intro">
+    <div class="intro__bg-wrapper">
+        <div class="intro__bg intro__bg--heavy-overlay">
+            <picture>
+                <source srcset="img/about-intro.jpg" media="(max-width: 640px)">
+                <img src="img/about-intro.jpg" alt="">
+            </picture>
+        </div>
+    </div>
+    <div class="container">
+        <div class="intro__content">
+            <div class="intro__top-row">
+                <div class="intro__logo-wrapper">
+                    <div class="intro__logo-wrapper-inner">
+                        <div class="intro__logo-hide-wrapper">
+                            <a href="#" class="intro__logo">
+                                <svg width="186" height="45" aria-hidden="true" class="intro__logo-image icon-logo">
+                                    <use xlink:href="#logo"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="intro__main-heading-wrapper">
+                    <h1 class="section-heading intro__main-heading js-sliding-text">
+                        вакансии
+                    </h1>
+                </div>
+            </div>
+            <div class="intro__text-content vacancies-intro__text-content">
+              <div class="vacancies-intro__title js-sliding-text">
+                Ищем талантливых сотрудников
+              </div>
+              
+              <div class="vacancies-intro__subtitle js-sliding-text">
+                Присоединяйтесь к команде «Неон&shy;-Арт» — получите возможность
+                реализовать свой потенциал и достойно зарабатывать
+              </div>
+
+              <a href="vacancies-opened" type="button" class="vacancies-intro__button page-header__contact-btn">
+                открытые вакансии
+              </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="vacancies-about" data-midnight="light" id="vacancies-about">
+    <div class="container">
+        <div class="vacancies-about__heading vacancies__sidebar-margin">
+            <h3 class="vacancies-about__title vacancies__title">
+                О Неон-Арт
+            </h3>
+
+            <div class="vacancies-about__row">
+                <div class="vacancies-about__text-content">
+                    <p>
+                        Неон-Арт – это крупный производственный комплекс, который реализует различные интересные 
+                        проекты в следующий направлениях: промышленное освещение для метрополитена, уникальные 
+                        фасадные системы, которым нет аналога на рынке, зенитные фонари, ландшафтные и парковые 
+                        светильники, стелы, входные группы, навигация и многое другое.
+                    </p><p>    
+                        В нашей компании мы ведем проект от начала и до конца, мы создаем его с помощью профессиональной 
+                        команды конструкторов, проектировщиков, архитекторов и дизайнеров. Мы выпускаем сложные изделия 
+                        и открываем новые рынки.
+                    </p>
+                </div>
+                <div class="vacancies-about__video-content">
+                    <div class="vacancies-about__video-wrapper">
+                        <video src="" class="vacancies-about__video" poster="img/vacancies/video-poster.png">
+                            <source src="movie.mp4" type="video/mp4">
+                            <source src="movie.ogg" type="video/ogg">
+                            Your browser does not support the video tag.
+                        </video>
+
+                        <button class="vacancies-about__video-btn">
+                            <svg aria-hidden="true" class="icon-play-vac">
+                                <use xlink:href="#play-vac"></use>
+                            </svg>                            
+                        </button>
+                    </div>
+
+                    <span class="vacancies-about__video-text vacancies-about__text-content">
+                        Видео о Неон-Арт
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="vacancies-about__body vacancies__sidebar-margin">
+            <h3 class="vacancies-about__title vacancies__title">
+                Условия работы
+            </h3>
+
+            <div class="vacancies-about__list-swiper" id="vacanciesListSwiper">
+                <ul class="vacancies-about__list">
+                    <li class="vacancies-about__item">
+                        <div class="vacancies-about__condition-image">
+                            <div class="vacancies-about__condition-pic-wrapper">
+                                <img 
+                                    data-src="img/vacancies/images/office.jpg" 
+                                    alt="" 
+                                    class="vacancies-about__condition-pic lazyload"
+                                >
+                            </div>
+                        </div>
+                        <span class="vacancies-about__condition-name">
+                            Производство
+                        </span>
+                        <p class="vacancies-about__condition-desc">
+                            (описание)промышленное освещение для метрополитена, уникальные 
+                            фасадные системы, которым нет аналога на рынке
+                        </p>
+                    </li>
+                    <li class="vacancies-about__item">
+                        <div class="vacancies-about__condition-image">
+                            <div class="vacancies-about__condition-pic-wrapper">
+                                <img 
+                                    data-src="img/vacancies/images/office.jpg" 
+                                    alt="" 
+                                    class="vacancies-about__condition-pic lazyload"
+                                >
+                            </div>
+                        </div>
+                        <span class="vacancies-about__condition-name">
+                            Производство
+                        </span>
+                        <p class="vacancies-about__condition-desc">
+                            (описание)промышленное освещение для метрополитена, уникальные 
+                            фасадные системы, которым нет аналога на рынке
+                        </p>
+                    </li>
+                    <li class="vacancies-about__item">
+                        <div class="vacancies-about__condition-image">
+                            <div class="vacancies-about__condition-pic-wrapper">
+                                <img 
+                                    data-src="img/vacancies/images/office.jpg" 
+                                    alt="" 
+                                    class="vacancies-about__condition-pic lazyload"
+                                >
+                            </div>
+                        </div>
+                        <span class="vacancies-about__condition-name">
+                            Производство
+                        </span>
+                        <p class="vacancies-about__condition-desc">
+                            (описание)промышленное освещение для метрополитена, уникальные 
+                            фасадные системы, которым нет аналога на рынке
+                        </p>
+                    </li>
+                    <li class="vacancies-about__item">
+                        <div class="vacancies-about__condition-image">
+                            <div class="vacancies-about__condition-pic-wrapper">
+                                <img 
+                                    data-src="img/vacancies/images/office.jpg" 
+                                    alt="" 
+                                    class="vacancies-about__condition-pic lazyload"
+                                >
+                            </div>
+                        </div>
+                        <span class="vacancies-about__condition-name">
+                            Производство
+                        </span>
+                        <p class="vacancies-about__condition-desc">
+                            (описание)промышленное освещение для метрополитена, уникальные 
+                            фасадные системы, которым нет аналога на рынке
+                        </p>
+                    </li>
+                    <li class="vacancies-about__item">
+                        <div class="vacancies-about__condition-image">
+                            <div class="vacancies-about__condition-pic-wrapper">
+                                <img 
+                                    data-src="img/vacancies/images/office.jpg" 
+                                    alt="" 
+                                    class="vacancies-about__condition-pic lazyload"
+                                >
+                            </div>
+                        </div>
+                        <span class="vacancies-about__condition-name">
+                            Производство
+                        </span>
+                        <p class="vacancies-about__condition-desc">
+                            (описание)промышленное освещение для метрополитена, уникальные 
+                            фасадные системы, которым нет аналога на рынке
+                        </p>
+                    </li>
+                    <li class="vacancies-about__item">
+                        <div class="vacancies-about__condition-image">
+                            <div class="vacancies-about__condition-pic-wrapper">
+                                <img 
+                                    data-src="img/vacancies/images/office.jpg" 
+                                    alt="" 
+                                    class="vacancies-about__condition-pic lazyload"
+                                >
+                            </div>
+                        </div>
+                        <span class="vacancies-about__condition-name">
+                            Производство
+                        </span>
+                        <p class="vacancies-about__condition-desc">
+                            (описание)промышленное освещение для метрополитена, уникальные 
+                            фасадные системы, которым нет аналога на рынке
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="vacancies-values" data-midnight="dark" id="vacancies-values">
+    <div class="container">
+        <div class="vacancies-values__heading vacancies__sidebar-margin">
+            <h3 class="vacancies-values__title vacancies__title">
+                Наши ценности
+            </h3>
+
+            <ul class="vacancies-values__list">
+                <li class="vacancies-values__item">
+                    <div class="vacancies-values__pic">
+                        <span class="vacancies-values__icon">
+                            <svg aria-hidden="true" class="icon-tick">
+                                <use xlink:href="#tick"></use>
+                            </svg>  
+                        </span>    
+                    </div>
+                    <div class="vacancies-values__desc">
+                        <span class="vacancies-values__name">
+                            Профессионализм
+                        </span>
+                        <span class="vacancies-values__text">
+                            Мы надежный и эффективный поставщик своих услуг и 
+                            способны решить самые сложные и амбициозные задачи.
+                        </span>
+                    </div>
+                </li>
+                <li class="vacancies-values__item">
+                    <div class="vacancies-values__pic">
+                        <span class="vacancies-values__icon">
+                            <svg aria-hidden="true" class="icon-tick">
+                                <use xlink:href="#tick"></use>
+                            </svg>  
+                        </span>    
+                    </div>
+                    <div class="vacancies-values__desc">
+                        <span class="vacancies-values__name">
+                            Развитие
+                        </span>
+                        <span class="vacancies-values__text">
+                            Каждый новый вызов нс развивает, мы не стоим на месте, 
+                            самосовершенствование, желание расти и подстраиваться 
+                            под изменения.
+                        </span>
+                    </div>
+                </li>
+                <li class="vacancies-values__item">
+                    <div class="vacancies-values__pic">
+                        <span class="vacancies-values__icon">
+                            <svg aria-hidden="true" class="icon-tick">
+                                <use xlink:href="#tick"></use>
+                            </svg>  
+                        </span>    
+                    </div>
+                    <div class="vacancies-values__desc">
+                        <span class="vacancies-values__name">
+                            Высокое качество
+                        </span>
+                        <span class="vacancies-values__text">
+                            Мы дорожим своей репутаций и выставляем высокие 
+                            требования к себе и к своей продукции.
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="vacancies-advantages" data-midnight="dark" id="vacancies-advantages">
+    <div class="container">
+        <div class="vacancies-values__heading vacancies__sidebar-margin">
+            <h3 class="vacancies-advantages__title vacancies__title">
+                Наши преимущества
+            </h3>
+
+            <ul class="vacancies-advantages__list">
+                <li class="vacancies-advantages__item">
+                    <div class="vacancies-advantages__icon">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#user-group"></use>
+                        </svg> 
+                    </div>
+
+                    <div class="vacancies-advantages__text">
+                        <span>Работа в </span>
+                        <span class="vacancies-advantages__text-bold">потрясающей команде</span>
+                    </div>
+                </li>
+                <li class="vacancies-advantages__item">
+                    <div class="vacancies-advantages__icon">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#money"></use>
+                        </svg> 
+                    </div>
+
+                    <div class="vacancies-advantages__text">
+                        <span class="vacancies-advantages__text-bold">Высокая зарплата </span>
+                        <span>по рынку и полный соцпакет</span>
+                    </div>
+                </li>
+                <li class="vacancies-advantages__item">
+                    <div class="vacancies-advantages__icon">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#shield"></use>
+                        </svg> 
+                    </div>
+
+                    <div class="vacancies-advantages__text">
+                        <span class="vacancies-advantages__text-bold">ДМС </span>
+                        <span>и программы поддержки здоровья</span>
+                    </div>
+                </li>
+                <li class="vacancies-advantages__item">
+                    <div class="vacancies-advantages__icon">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#clocktime"></use>
+                        </svg> 
+                    </div>
+
+                    <div class="vacancies-advantages__text">
+                        <span class="vacancies-advantages__text-bold">Гибкий график </span>
+                        <span>работы</span>
+                    </div>
+                </li>
+                <li class="vacancies-advantages__item">
+                    <div class="vacancies-advantages__icon">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#turkey"></use>
+                        </svg> 
+                    </div>
+
+                    <div class="vacancies-advantages__text">
+                        <span class="vacancies-advantages__text-bold">Своя кухня </span>
+                        <span>с ежедневными обедами и “счастливыми часами”</span>
+                    </div>
+                </li>
+                <li class="vacancies-advantages__item">
+                    <div class="vacancies-advantages__icon">
+                        <svg aria-hidden="true" class="icon">
+                            <use xlink:href="#markerpin"></use>
+                        </svg> 
+                    </div>
+
+                    <div class="vacancies-advantages__text">
+                        <span>Современный и </span>
+                        <span class="vacancies-advantages__text-bold">комфортный офис </span>
+                        <span>в центре города</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="vacancies-opened" data-midnight="light" id="vacancies-opened">
+    <div class="container">
+        <div class="vacancies-values__heading vacancies__sidebar-margin">
+            <h3 class="vacancies-opened__title vacancies__title">
+                Открытые вакансии
+            </h3>
+
+            <div class="vacancies-opened__list-block">
+                <div class="vacancies-opened__list-heading">
+                    <div class="vacancies-opened__row">
+                        <span class="vacancies-opened__column vacancies-opened__text-head vacancies-opened__text-value">
+                            Наименование
+                        </span>
+
+                        <span class="vacancies-opened__column vacancies-opened__text-head vacancies-opened__text-value">
+                            Опыт работы
+                        </span>
+
+                        <span class="vacancies-opened__column vacancies-opened__text-head vacancies-opened__text-value">
+                            Занятость
+                        </span>
+
+                        <span class="vacancies-opened__column vacancies-opened__text-head vacancies-opened__text-value">
+                            График работы
+                        </span>
+                    </div>
+                </div>
+
+                <ul class="vacancies-opened__list">
+                    <li class="vacancies-opened__item">
+                        <a href="#" class="vacancies-opened__row vacancies-opened__link">
+                            <span class="vacancies-opened__column vacancies-opened__text-key">
+                                Инженер-конструктор
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                От 1 года до 3 лет
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Полная занятость
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Вахтовый метод
+                            </span>
+                        </a>
+                    </li>
+                    <li class="vacancies-opened__item">
+                        <a href="#" class="vacancies-opened__row vacancies-opened__link">
+                            <span class="vacancies-opened__column vacancies-opened__text-key">
+                                Инженер ПТО
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                От 1 года до 3 лет
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Полная занятость
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Вахтовый метод
+                            </span>
+                        </a>
+                    </li>
+                    <li class="vacancies-opened__item">
+                        <a href="#" class="vacancies-opened__row vacancies-opened__link">
+                            <span class="vacancies-opened__column vacancies-opened__text-key">
+                                Логист
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                От 1 года до 3 лет
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Полная занятость
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Вахтовый метод
+                            </span>
+                        </a>
+                    </li>
+                    <li class="vacancies-opened__item">
+                        <a href="#" class="vacancies-opened__row vacancies-opened__link">
+                            <span class="vacancies-opened__column vacancies-opened__text-key">
+                                Инженер-конструктор
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                От 1 года до 3 лет
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Полная занятость
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Вахтовый метод
+                            </span>
+                        </a>
+                    </li>
+                    <li class="vacancies-opened__item">
+                        <a href="#" class="vacancies-opened__row vacancies-opened__link">
+                            <span class="vacancies-opened__column vacancies-opened__text-key">
+                                Инженер ПТО
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                От 1 года до 3 лет
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Полная занятость
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Вахтовый метод
+                            </span>
+                        </a>
+                    </li>
+                    <li class="vacancies-opened__item">
+                        <a href="#" class="vacancies-opened__row vacancies-opened__link">
+                            <span class="vacancies-opened__column vacancies-opened__text-key">
+                                Логист
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                От 1 года до 3 лет
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Полная занятость
+                            </span>
+
+                            <span class="vacancies-opened__column vacancies-opened__text-value">
+                                Вахтовый метод
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="vacancies-opened__navigation">
+                <div class="vacancies-opened__counter">
+                    <span class="vacancies-opened__counter-text">
+                        Показано
+                    </span>
+                    <span class="vacancies-opened__counter-current">
+                        11
+                    </span>
+                    <span class="vacancies-opened__counter-text">
+                        из
+                    </span>
+                    <span class="vacancies-opened__counter-total">
+                        10
+                    </span>
+                </div>
+                
+                <div class="vacancies-opened__pagination">
+                    <ul class="vacancies-opened__pagination-list">
+                        <li class="vacancies-opened__pagination-item">
+                            <a href="#" class="vacancies-opened__pagination-btn">
+                                1
+                            </a>
+                        </li>
+                        <li class="vacancies-opened__pagination-item">
+                            <a href="#" class="vacancies-opened__pagination-btn">
+                                2
+                            </a>
+                        </li>
+                        <li class="vacancies-opened__pagination-item">
+                            <a href="#" class="vacancies-opened__pagination-btn">
+                                3
+                            </a>
+                        </li>
+                    </ul>
+
+                    <a href="#" class="vacancies-opened__pagination-link">
+                        <span class="vacancies-opened__pagination-link-text">Дальше</span>
+                        <span class="vacancies-opened__pagination-link-icon">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#pag-arrow"></use>
+                            </svg> 
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="vacancies-reviews" data-midnight="light" id="vacancies-reviews">
+    <div class="container">
+        <div class="vacancies-reviews__heading vacancies__sidebar-margin">
+            <h3 class="vacancies-reviews__title vacancies__title">
+                Сотрудники компании
+            </h3>
+
+            <div class="vacancies-reviews__slider">
+                <div id="vacancieReviewsSwiper" class="vacancies-reviews__swiper swiper">
+                    <ul class="vacancies-reviews__swiper-wrapper swiper-wrapper">
+                        <li class="vacancies-reviews__swiper-slide swiper-slide">
+                            <div class="vacancies-reviews__slide-body">
+                                <div class="vacancies-reviews__slide-image">
+                                    <picture>
+                                        <source srcset="img/vacancies/reviews/foto.jpg">
+                                        <img src="img/vacancies/reviews/foto.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="vacancies-reviews__slide-head">
+                                    <span class="vacancies-reviews__slide-name">
+                                        Густов Илья
+                                    </span>
+                                    <div class="vacancies-reviews__slide-desc">
+                                        <span class="vacancies-reviews__slide-role">
+                                            конструктор
+                                        </span>
+                                        <span class="vacancies-reviews__slide-experience">
+                                            работает в компании с 2010
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="vacancies-reviews__slide-btn vacancies-modal__video-button">
+                                    <span class="vacancies-modal__video-icon">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#video-btn"></use>
+                                        </svg>   
+                                    </span>
+
+                                    <span class="vacancies-modal__video-text">
+                                        Видео интервью
+                                    </span>
+                                </a>
+
+                                <div class="vacancies-reviews__text">
+                                    <span>
+                                        Очень крутая компания! Пользуемся арендованным сервером, 
+                                        все стабильно! Поддержка суперская, молниеносная, спасибо 
+                                        большое ребятам за такой сервис и высшую культуру 
+                                        обслуживания клиентов! Так держать! Всем советуем)
+                                        Очень крутая компания! Пользуемся арендованным сервером, 
+                                        все стабильно! Поддержка суперская, молниеносная, спасибо 
+                                        большое ребятам за такой сервис и высшую культуру 
+                                         обслуживания клиентов! Так держать! Всем советуем)
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="vacancies-reviews__swiper-slide swiper-slide">
+                            <div class="vacancies-reviews__slide-body">
+                                <div class="vacancies-reviews__slide-image">
+
+                                </div>
+
+                                <div class="vacancies-reviews__slide-head">
+                                    <span class="vacancies-reviews__slide-name">
+                                        Густов Илья
+                                    </span>
+                                    <div class="vacancies-reviews__slide-desc">
+                                        <span class="vacancies-reviews__slide-role">
+                                            конструктор
+                                        </span>
+                                        <span class="vacancies-reviews__slide-experience">
+                                            работает в компании с 2010
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="vacancies-reviews__slide-btn vacancies-modal__video-button">
+                                    <span class="vacancies-modal__video-icon">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#video-btn"></use>
+                                        </svg>   
+                                    </span>
+
+                                    <span class="vacancies-modal__video-text">
+                                        Видео интервью
+                                    </span>
+                                </a>
+
+                                <div class="vacancies-reviews__text">
+                                    <span>
+                                        Очень крутая компания! Пользуемся арендованным сервером, 
+                                        все стабильно! Поддержка суперская, молниеносная, спасибо 
+                                        большое ребятам за такой сервис и высшую культуру 
+                                         обслуживания клиентов! Так держать! Всем советуем)
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="vacancies-reviews__swiper-slide swiper-slide">
+                            <div class="vacancies-reviews__slide-body">
+                                <div class="vacancies-reviews__slide-image">
+                                    <picture>
+                                        <source srcset="img/vacancies/reviews/foto.jpg">
+                                        <img src="img/vacancies/reviews/foto.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="vacancies-reviews__slide-head">
+                                    <span class="vacancies-reviews__slide-name">
+                                        Густов Илья
+                                    </span>
+                                    <div class="vacancies-reviews__slide-desc">
+                                        <span class="vacancies-reviews__slide-role">
+                                            конструктор
+                                        </span>
+                                        <span class="vacancies-reviews__slide-experience">
+                                            работает в компании с 2010
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="vacancies-reviews__slide-btn vacancies-modal__video-button">
+                                    <span class="vacancies-modal__video-icon">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#video-btn"></use>
+                                        </svg>   
+                                    </span>
+
+                                    <span class="vacancies-modal__video-text">
+                                        Видео интервью
+                                    </span>
+                                </a>
+
+                                <div class="vacancies-reviews__text">
+                                    <span>
+                                        Очень крутая компания! Пользуемся арендованным сервером, 
+                                        все стабильно! Поддержка суперская, молниеносная, спасибо 
+                                        большое ребятам за такой сервис и высшую культуру 
+                                        обслуживания клиентов! Так держать! Всем советуем)
+                                        Очень крутая компания! Пользуемся арендованным сервером, 
+                                        все стабильно! Поддержка суперская, молниеносная, спасибо 
+                                        большое ребятам за такой сервис и высшую культуру 
+                                         обслуживания клиентов! Так держать! Всем советуем)
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="vacancies-reviews__swiper-slide swiper-slide">
+                            <div class="vacancies-reviews__slide-body">
+                                <div class="vacancies-reviews__slide-image">
+                                    <picture>
+                                        <source srcset="img/vacancies/reviews/foto.jpg">
+                                        <img src="img/vacancies/reviews/foto.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="vacancies-reviews__slide-head">
+                                    <span class="vacancies-reviews__slide-name">
+                                        Густов Илья
+                                    </span>
+                                    <div class="vacancies-reviews__slide-desc">
+                                        <span class="vacancies-reviews__slide-role">
+                                            конструктор
+                                        </span>
+                                        <span class="vacancies-reviews__slide-experience">
+                                            работает в компании с 2010
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <a href="#" class="vacancies-reviews__slide-btn vacancies-modal__video-button">
+                                    <span class="vacancies-modal__video-icon">
+                                        <svg aria-hidden="true" class="icon">
+                                            <use xlink:href="#video-btn"></use>
+                                        </svg>   
+                                    </span>
+
+                                    <span class="vacancies-modal__video-text">
+                                        Видео интервью
+                                    </span>
+                                </a>
+
+                                <div class="vacancies-reviews__text">
+                                    <span>
+                                        Очень крутая компания! Пользуемся арендованным сервером, 
+                                        все стабильно! Поддержка суперская, молниеносная, спасибо 
+                                        большое ребятам за такой сервис и высшую культуру 
+                                        обслуживания клиентов! Так держать! Всем советуем)
+                                        Очень крутая компания! Пользуемся арендованным сервером, 
+                                        все стабильно! Поддержка суперская, молниеносная, спасибо 
+                                        большое ребятам за такой сервис и высшую культуру 
+                                         обслуживания клиентов! Так держать! Всем советуем)
+                                    </span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="vacancies-reviews__buttons">
+                <button type="button" class="vacancies-reviews__button vacancies-reviews__button--prev">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#pag-arrow"></use>
+                    </svg> 
+                </button>
+
+                <button type="button" class="vacancies-reviews__button vacancies-reviews__button--next">
+                    <svg aria-hidden="true" class="icon">
+                        <use xlink:href="#pag-arrow"></use>
+                    </svg> 
+                </button>
+            </div>
+        </div>
+    </div>
+</section>  
+
+<section class="vacancies-contacts" data-midnight="dark" id="vacancies-contacts">
+    <div class="vacancies-contacts__content">
+        <div class="vacancies-contacts__image-wrapper">
+            <picture>
+                <source srcset="img/vacancies/contacts/back-mobile.jpg" media="(max-width: 768px)">
+                <img src="img/vacancies/contacts/back.jpg" alt="">
+            </picture>
+        </div>
+
+        <div class="container">
+            <div class="vacancies-contacts__heading vacancies__sidebar-margin">
+                <h3 class="vacancies-contacts__title vacancies__title">
+                    Задайте нам любой вопрос по телефону или напишите письмо
+                </h3>
+
+                <div class="vacancies-contacts__contacts-list">
+
+                    <div class="vacancies-contacts__contacts-item">
+                        <div class="vacancies-modal__contacts-title form-vacancies__agreement--big">
+                            Отдел кадров
+                        </div>
+
+                        <div class="vacancies-modal__contacts-list">
+                            <div class="vacancies-modal__contacts-item">
+                                <a href="tel:78432926211" class="vacancies-modal__contacts-link vacancies-modal__contacts-link--big">
+                                    <span>+7 (843) 292-62-11 </span>
+                                    <span class="vacancies-modal__contacts-link-text">(доп. 367)</span>
+                                </a>
+                            </div>
+                            <div class="vacancies-modal__contacts-item">
+                                <a href="mailto:hr@neonart.ru" class="vacancies-modal__contacts-link vacancies-modal__contacts-link--big">
+                                    hr@neonart.ru
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vacancies-modal__socials">
+                        <a href="#" class="new-social-link">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#whatsapp"></use>
+                            </svg> 
+                        </a>
+
+                        <a href="#" class="new-social-link">
+                            <svg aria-hidden="true" class="icon">
+                                <use xlink:href="#telegram"></use>
+                            </svg> 
+                        </a>
+                    </div>
+                
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="vacancies-contacts__map contacts__map-wrapper">
+        <div class="contacts__map js-contacts-map"></div>
+    </div>
+</section>
+
+<div class="vacancies-modal">
+    <div class="vacancies-modal__contianer">
+        <div class="vacancies-modal__content">
+            <div class="vacancies-modal__body">
+                <div class="vacancies-modal__info-block">
+                    <div class="vacancies-modal__heading">
+                        <span class="vacancies-modal__name">
+                            Электромонтер по ремонту и обслуживанию электрооборудования
+                        </span>
+                        <span class="vacancies-modal__salary">
+                            от 50 000 ₽ на руки
+                        </span>
+                        <div class="vacancies-modal__info">
+                            <span>
+                                Требуемый опыт работы: 1–3 года
+                            </span>
+                            <span>
+                                Полная занятость, полный день
+                            </span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="vacancies-modal__video-link">
+                        <div class="vacancies-modal__video-poster">
+                            <picture>
+                                <source srcset="img/vacancies/video-poster-modal.jpg">
+                                <img src="img/vacancies/video-poster-modal.jpg" alt="">
+                            </picture>
+                        </div>
+
+                        <div class="vacancies-modal__video-button">
+                            <span class="vacancies-modal__video-icon">
+                                <svg aria-hidden="true" class="icon">
+                                    <use xlink:href="#video-btn"></use>
+                                </svg>   
+                            </span>
+
+                            <span class="vacancies-modal__video-text">
+                                Видео о компании
+                            </span>
+                        </div>
+                    </a>
+
+                    <ul class="vacancies-modal__lists">
+                        <li class="vacancies-modal__lists-item">
+                            <div class="vacancies-modal__lists-title">
+                                Обязанности:
+                            </div>
+                            <ul class="vacancies-modal__list">
+                                <li class="vacancies-modal__item">
+                                    Работы по монтажу электрооборудования (подключение), прокладка кабелей
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Обеспечение безаварийной и надежной работы всех видов электрооборудования, 
+                                    их правильную эксплуатацию, своевременный и качественный ремонт  
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Выполнение планово-предупредительного и текущего ремонта электрооборудования 
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Обслуживание производства
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="vacancies-modal__lists-item">
+                            <div class="vacancies-modal__lists-title">
+                                Требования:
+                            </div>
+                            <ul class="vacancies-modal__list">
+                                <li class="vacancies-modal__item">
+                                    Образование в области электроснабжения, электротехники не ниже средне-технического
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Навыки чтения электрических схем и чертежей
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Соблюдение всех норм и требований техники безопасности
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="vacancies-modal__lists-item">
+                            <div class="vacancies-modal__lists-title">
+                                Условия:
+                            </div>
+                            <ul class="vacancies-modal__list">
+                                <li class="vacancies-modal__item">
+                                    Работа в стабильной и успешной компании-лидере рекламного рынка РФ
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Официальное трудоустройство 
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Карьерный и профессиональный рост
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Возможность обучения за счет Компании
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Работа в теплом, чистом производственном помещении
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Современное европейское оборудование
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Собственная столовая на территории предприятия, частичная компенсация питания
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Удобная охраняемая парковка
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Предоставление спецодежды
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Страхование от несчастных случаев 24 часа
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Место работы Кировский район, ул. Набережная 31 аб
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="vacancies-modal__form-block form-vacancies" action="#" data-need-validation="">
+                    <div class="form-vacancies__body">
+                        <span class="form-vacancies__title vacancies-modal__name">
+                            Откликнуться на вакансию
+                        </span>
+
+                        <div class="form-vacancies__row">
+                            <input type="text" class="form-vacancies__input" placeholder="ваши имя и фамилия" required>
+                        </div>
+
+                        <div class="form-vacancies__row">
+                            <input type="text" class="form-vacancies__input js-phone-input" placeholder="телефон" required data-parsley-phone="">
+                        </div>
+
+                        <div class="form-vacancies__loader">
+                            <label class="form-vacancies__loader-label">
+                                <svg aria-hidden="true" class="icon">
+                                    <use xlink:href="#paperclip"></use>
+                                </svg> 
+                                <span>
+                                    прикрепить резюме
+                                </span>
+                                <input class="visually-hidden form-vacancies__loader-input" type="file" hidden required>
+                            </label>
+                        </div>
+
+                        <div class="form-vacancies__submit">
+                            <button type="submit" class="form-vacancies__submit-btn page-header__contact-btn">
+                                отправить
+                            </button>
+
+                            <div class="form-vacancies__agreement">
+                                <span>
+                                    нажимая кнопку “отправить” вы даете согласие на<br>
+                                    обработку ваших персональных данных<br> и соглашаетесь с 
+                                </span>
+                                <a href="#" class="">
+                                    политикой&nbsp;конфиденциальности
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="vacancies-modal__contacts">
+                    <div class="vacancies-modal__contacts-title form-vacancies__agreement">
+                        Отдел кадров
+                    </div>
+
+                    <div class="vacancies-modal__contacts-list">
+                        <div class="vacancies-modal__contacts-item">
+                            <a href="tel:78432926211" class="vacancies-modal__contacts-link">
+                                +7 (843) 292-62-11 (доп. 367)
+                            </a>
+                        </div>
+                        <div class="vacancies-modal__contacts-item">
+                            <a href="mailto:hr@neonart.ru" class="vacancies-modal__contacts-link">
+                                hr@neonart.ru
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="vacancies-modal__responde-btn">
+                Откликнуться
+            </button>
+
+            <button class="vacancies-modal__close-btn">
+                <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#close"></use>
+                </svg> 
+            </button>
+        </div>
+    </div>
+</div>
+
+{{/content}}
+{{/extend}}

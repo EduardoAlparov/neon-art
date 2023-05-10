@@ -48,6 +48,10 @@ import photoSlider from './photoSlider';
 import caseRealisedProjects from './caseRealisedProjects';
 import loadMoreNews from './loadMoreNews';
 import newsFixedSidebar from './newsFixedSidebar';
+import vacanciesIntroLink from './vacanciesIntroLink';
+import vacanciesValuesSwiper from './vacanciesValuesSwiper';
+import vacanciesReviewsSwiper from './vacanciesReviewsSwiper';
+import vacanciesModalPattern from './vacanciesModalPattern';
 import fixSections from './fixSections';
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,6 +82,11 @@ document.addEventListener('DOMContentLoaded', function() {
     companyHistorySlider();
     historySlider();
     revealHistoryBlock();
+
+    vacanciesIntroLink();
+    vacanciesValuesSwiper();
+    vacanciesReviewsSwiper();
+    vacanciesModalPattern();
 
     taskGallery();
     productsSlider();

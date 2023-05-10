@@ -11,7 +11,10 @@
     --content-padding: 4rem;
     --primary-color: #e63327;
     --text-color: #363636;
+    --black-color: #1d2027;
+    --bg-color: #F2F2F5;
     --grey: #292933;
+    --white-color: #fff;
     --montserrat: 'Montserrat', sans-serif;
     --header-height: 8rem;
     --sidebar-width: 22rem;
@@ -19,7 +22,6 @@
     @include breakpoint(mobile) {
         --header-height: 5.6rem;
         --content-padding: 2rem;
-
         --sidebar-width: 0;
     }
 }
@@ -61,6 +63,12 @@ body {
     &.dark {
         background: #292933;
         color: white;
+    }
+
+    &.vacancies-modal-is-iopen {
+        &  {
+            overflow: hidden;
+        }
     }
 }
 
@@ -216,6 +224,8 @@ th {
         overflow: hidden;
     }
 }
+
+
 
 .lineParent {
     overflow: hidden;

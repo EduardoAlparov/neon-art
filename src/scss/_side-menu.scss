@@ -13,6 +13,10 @@
     transition: opacity 0.2s, visibility 0s linear .2s;
     visibility: hidden;
 
+    &--center {
+        bottom: 27% !important;
+    }
+
     @include breakpoint(mobile) {
         display: none;
     }
