@@ -7,9 +7,9 @@ export default function sectionsMenu() {
     if (window.matchMedia('(max-width: 640px)').matches) return;
     const elements = Array.from(document.querySelectorAll('.js-sections-menu'));
 
+
     elements.forEach(element => {
         const sectionsMenuLinks = Array.from(element.querySelectorAll('.js-sections-menu-link'));
-       
 
         const items = sectionsMenuLinks.map(link => {
             const id = link.hash.replace('to-', '');
@@ -47,6 +47,8 @@ export default function sectionsMenu() {
 
             itemsAfterScrollPosition.length && itemsAfterScrollPosition[0].link.classList.add('active');
         }
+
+        setActiveItem();
 
         function writeLayout() {
             setActiveItem();

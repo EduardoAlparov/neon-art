@@ -9,9 +9,9 @@ export default function hideSideNav() {
     ScrollTrigger.create({
         trigger: '.page-footer',
         start: 'top bottom',
-      
+
         markers: false,
-        end: 'bottom top',
+        end: 'max',
         onToggle: ({isActive}) => {
             if (isActive) {
                 document.body.classList.add('hide-side-nav');
@@ -23,8 +23,8 @@ export default function hideSideNav() {
 
     ScrollTrigger.create({
         trigger: '.vacancies-contacts__map',
-        start: 'top bottom',
-      
+        start: 'center bottom',
+
         markers: false,
         end: 'bottom top',
         onToggle: ({isActive}) => {

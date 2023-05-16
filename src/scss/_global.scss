@@ -57,7 +57,7 @@ body {
     color: var(--text-color);
     font-family: var(--montserrat);
     font-weight: 400;
-    
+
     -webkit-marquee-increment: 0vw;
 
     &.dark {
@@ -225,8 +225,6 @@ th {
     }
 }
 
-
-
 .lineParent {
     overflow: hidden;
 }
@@ -250,4 +248,8 @@ select:-webkit-autofill:focus {
 
 [class*='ymaps-2'][class*='-ground-pane'] {
     filter: grayscale(100%);
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
 }
