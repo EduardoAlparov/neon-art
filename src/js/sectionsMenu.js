@@ -1,7 +1,5 @@
 import { debounce } from 'lodash';
 
-
-
 export default function sectionsMenu() {
 
     if (window.matchMedia('(max-width: 640px)').matches) return;

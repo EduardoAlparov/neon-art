@@ -11,35 +11,36 @@ export default () => {
   Array.from(vacanciesLinks).forEach( link => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
+
       Array.from(vacanciesLinks).forEach( l => {
         l.classList.remove('vacancies-opened__link--active');
       })
 
       link.classList.add('vacancies-opened__link--active');
-      vacanciesModal.classList.add('_is-open');
-      document.body.classList.add('vacancies-modal-is-iopen');
 
-      if(vacanciesModal.classList.contains('_is-open')) {
-        vacanciesModal.addEventListener('click', (e) => {
-          if(e.target.closest('.vacancies-modal__close-btn') || 
-          !e.target.closest('.vacancies-modal__content')) {
-            vacanciesModal.classList.remove('_is-open');
-            document.body.classList.remove('vacancies-modal-is-iopen');
-
-            Array.from(vacanciesLinks).forEach( l => {
-              l.classList.remove('vacancies-opened__link--active');
-            })
-          }
-        })
-      }
+      vacanciesModalOpen(link.getAttribute('id'));
     })
+  })
+
+  vacanciesModal.addEventListener('click', (e) => {
+    if(vacanciesModal.classList.contains('_is-open')) {
+      if(e.target.closest('.vacancies-modal__close-btn') ||
+      !e.target.closest('.vacancies-modal__content')) {
+
+        Array.from(vacanciesLinks).forEach( l => {
+          l.classList.remove('vacancies-opened__link--active');
+        })
+
+        vacanciesModalClose();
+      }
+    }
   })
 
   if(vacanciesRespondeBtn) {
     vacanciesRespondeBtn.addEventListener('click', () => {
-      vacanciesForm.scrollIntoView({ 
-        behavior: "smooth", 
-        block: "end" 
+      vacanciesForm.scrollIntoView({
+        behavior: "smooth",
+        block: "end"
       });
       vacanciesRespondeBtn.classList.add('vacancies-modal__responde-btn--hidden');
     })
@@ -53,13 +54,19 @@ export default () => {
     }
   }
 
-  if(vacanciesFormLoad) {
-    vacanciesFormLoad.addEventListener('input', (e) => {
-      if(e.target.value) {
-        console.log(e.target.value);
-      }
-    })
+  function vacanciesModalOpen(id) {
+    vacanciesModal.classList.add('_is-open');
+    document.body.classList.add('vacancies-modal-is-iopen');
   }
+
+  function vacanciesModalClose() {
+    vacanciesModal.classList.remove('_is-open');
+    document.body.classList.remove('vacancies-modal-is-iopen');
+  }
+
+
+  window.vacanciesModalOpen = vacanciesModalOpen;
+  window.vacanciesModalClose = vacanciesModalClose;
 
   function isElementInViewport(el) {
     var rect = el.getBoundingClientRect();
@@ -78,7 +85,7 @@ export default () => {
 
         if(vacanciesModal.classList.contains('_is-open')) {
           vacanciesModal.addEventListener('click', (e) => {
-            if(e.target.closest('.vacancies-modal__close-btn') || 
+            if(e.target.closest('.vacancies-modal__close-btn') ||
             !e.target.closest('.vacancies-modal__content')) {
               vacanciesModal.classList.remove('_is-open');
               document.body.classList.remove('vacancies-modal-is-iopen');

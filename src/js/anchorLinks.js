@@ -9,7 +9,7 @@ export default function anchorLinks() {
             const link = event.target.matches('a') ? event.target : event.target.closest('a');
             const hash = link.hash;
 
-            console.log('Hash', hash);
+            // console.log('Hash', hash);
 
             if (hash && hash.startsWith('#to-')) {
                 event.preventDefault();
