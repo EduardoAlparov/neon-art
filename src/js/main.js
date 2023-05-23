@@ -51,7 +51,8 @@ import newsFixedSidebar from './newsFixedSidebar';
 import vacanciesIntroLink from './vacanciesIntroLink';
 import vacanciesValuesSwiper from './vacanciesValuesSwiper';
 import vacanciesReviewsSwiper from './vacanciesReviewsSwiper';
-import vacanciesModalPattern from './vacanciesModalPattern';
+import vacanciesModalsPattern from './vacanciesModalsPattern';
+import vacanciesModalOpen from './vacanciesModalOpen';
 import videoPlay from './videoPlay';
 import fixSections from './fixSections';
 gsap.registerPlugin(ScrollTrigger);
@@ -87,7 +88,8 @@ document.addEventListener('DOMContentLoaded', function() {
     vacanciesIntroLink();
     vacanciesValuesSwiper();
     vacanciesReviewsSwiper();
-    vacanciesModalPattern();
+    vacanciesModalOpen();
+    vacanciesModalsPattern();
     videoPlay();
 
     taskGallery();

@@ -723,7 +723,7 @@
                 реализовать свой потенциал и достойно зарабатывать
               </div>
 
-              <a href="vacancies-opened" type="button" class="vacancies-intro__button page-header__contact-btn">
+              <a href="vacancies-opened" type="button" class="vacancies-intro__button page-header__contact-btn js-scrolling-button">
                 открытые вакансии
               </a>
             </div>
@@ -1076,8 +1076,8 @@
                 </div>
 
                 <ul class="vacancies-opened__list">
-                    <li class="vacancies-opened__item">
-                        <a href="#" id="vacancy-00" class="vacancies-opened__row vacancies-opened__link">
+                    <li class="vacancies-opened__item" data-target="vacancies-001">
+                        <a href="#" class="vacancies-opened__row vacancies-opened__link">
                             <span class="vacancies-opened__column vacancies-opened__text-key">
                                 Инженер-конструктор
                             </span>
@@ -1095,86 +1095,10 @@
                             </span>
                         </a>
                     </li>
-                    <li class="vacancies-opened__item">
-                        <a href="#" id="vacancy-01" class="vacancies-opened__row vacancies-opened__link">
-                            <span class="vacancies-opened__column vacancies-opened__text-key">
-                                Инженер ПТО
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                От 1 года до 3 лет
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                Полная занятость
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                Вахтовый метод
-                            </span>
-                        </a>
-                    </li>
-                    <li class="vacancies-opened__item">
-                        <a href="#" id="vacancy-02" class="vacancies-opened__row vacancies-opened__link">
-                            <span class="vacancies-opened__column vacancies-opened__text-key">
-                                Логист
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                От 1 года до 3 лет
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                Полная занятость
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                Вахтовый метод
-                            </span>
-                        </a>
-                    </li>
-                    <li class="vacancies-opened__item">
-                        <a href="#" id="vacancy-03" class="vacancies-opened__row vacancies-opened__link">
+                    <li class="vacancies-opened__item" data-target="vacancies-002">
+                        <a href="#" class="vacancies-opened__row vacancies-opened__link">
                             <span class="vacancies-opened__column vacancies-opened__text-key">
                                 Инженер-конструктор
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                От 1 года до 3 лет
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                Полная занятость
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                Вахтовый метод
-                            </span>
-                        </a>
-                    </li>
-                    <li class="vacancies-opened__item">
-                        <a href="#" id="vacancy-04" class="vacancies-opened__row vacancies-opened__link">
-                            <span class="vacancies-opened__column vacancies-opened__text-key">
-                                Инженер ПТО
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                От 1 года до 3 лет
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                Полная занятость
-                            </span>
-
-                            <span class="vacancies-opened__column vacancies-opened__text-value">
-                                Вахтовый метод
-                            </span>
-                        </a>
-                    </li>
-                    <li class="vacancies-opened__item">
-                        <a href="#" id="vacancy-05" class="vacancies-opened__row vacancies-opened__link">
-                            <span class="vacancies-opened__column vacancies-opened__text-key">
-                                Логист
                             </span>
 
                             <span class="vacancies-opened__column vacancies-opened__text-value">
@@ -1523,7 +1447,207 @@
     </div>
 </section>
 
-<div class="vacancies-modal">
+<div class="vacancies-modal" id="vacancies-001">
+    <div class="vacancies-modal__contianer">
+        <div class="vacancies-modal__content">
+            <div class="vacancies-modal__body">
+                <div class="vacancies-modal__info-block">
+                    <div class="vacancies-modal__heading">
+                        <span class="vacancies-modal__name">
+                            Электромонтер по ремонту и обслуживанию электрооборудования
+                        </span>
+                        <span class="vacancies-modal__salary">
+                            от 50 000 ₽ на руки
+                        </span>
+                        <div class="vacancies-modal__info">
+                            <span>
+                                Требуемый опыт работы: 1–3 года
+                            </span>
+                            <span>
+                                Полная занятость, полный день
+                            </span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="vacancies-modal__video-link">
+                        <div class="vacancies-modal__video-poster">
+                            <picture>
+                                <source srcset="img/vacancies/video-poster-modal.jpg">
+                                <img src="img/vacancies/video-poster-modal.jpg" alt="">
+                            </picture>
+                        </div>
+
+                        <div class="vacancies-modal__video-button">
+                            <span class="vacancies-modal__video-icon">
+                                <svg aria-hidden="true" class="icon">
+                                    <use xlink:href="#video-btn"></use>
+                                </svg>
+                            </span>
+
+                            <span class="vacancies-modal__video-text">
+                                Видео о компании
+                            </span>
+                        </div>
+                    </a>
+
+                    <ul class="vacancies-modal__lists">
+                        <li class="vacancies-modal__lists-item">
+                            <div class="vacancies-modal__lists-title">
+                                Обязанности:
+                            </div>
+                            <ul class="vacancies-modal__list">
+                                <li class="vacancies-modal__item">
+                                    Работы по монтажу электрооборудования (подключение), прокладка кабелей
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Обеспечение безаварийной и надежной работы всех видов электрооборудования,
+                                    их правильную эксплуатацию, своевременный и качественный ремонт
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Выполнение планово-предупредительного и текущего ремонта электрооборудования
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Обслуживание производства
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="vacancies-modal__lists-item">
+                            <div class="vacancies-modal__lists-title">
+                                Требования:
+                            </div>
+                            <ul class="vacancies-modal__list">
+                                <li class="vacancies-modal__item">
+                                    Образование в области электроснабжения, электротехники не ниже средне-технического
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Навыки чтения электрических схем и чертежей
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Соблюдение всех норм и требований техники безопасности
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="vacancies-modal__lists-item">
+                            <div class="vacancies-modal__lists-title">
+                                Условия:
+                            </div>
+                            <ul class="vacancies-modal__list">
+                                <li class="vacancies-modal__item">
+                                    Работа в стабильной и успешной компании-лидере рекламного рынка РФ
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Официальное трудоустройство
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Карьерный и профессиональный рост
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Возможность обучения за счет Компании
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Работа в теплом, чистом производственном помещении
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Современное европейское оборудование
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Собственная столовая на территории предприятия, частичная компенсация питания
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Удобная охраняемая парковка
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Предоставление спецодежды
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Страхование от несчастных случаев 24 часа
+                                </li>
+                                <li class="vacancies-modal__item">
+                                    Место работы Кировский район, ул. Набережная 31 аб
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <form class="vacancies-modal__form-block form-vacancies" action="#" data-need-validation="">
+                    <div class="form-vacancies__body">
+                        <span class="form-vacancies__title vacancies-modal__name">
+                            Откликнуться на вакансию
+                        </span>
+
+                        <div class="form-vacancies__row">
+                            <input type="text" class="form-vacancies__input" placeholder="ваши имя и фамилия" required>
+                        </div>
+
+                        <div class="form-vacancies__row">
+                            <input type="text" class="form-vacancies__input js-phone-input" placeholder="телефон" required data-parsley-phone="">
+                        </div>
+
+                        <div class="form-vacancies__loader">
+                            <label class="form-vacancies__loader-label">
+                                <svg aria-hidden="true" class="icon">
+                                    <use xlink:href="#paperclip"></use>
+                                </svg>
+                                <span>
+                                    прикрепить резюме
+                                </span>
+                                <input class="visually-hidden form-vacancies__loader-input" type="file" hidden required>
+                            </label>
+                        </div>
+
+                        <div class="form-vacancies__submit">
+                            <button type="submit" class="form-vacancies__submit-btn page-header__contact-btn">
+                                отправить
+                            </button>
+
+                            <div class="form-vacancies__agreement">
+                                <span>
+                                    нажимая кнопку “отправить” вы даете согласие на<br>
+                                    обработку ваших персональных данных<br> и соглашаетесь с
+                                </span>
+                                <a href="#" class="">
+                                    политикой&nbsp;конфиденциальности
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="vacancies-modal__contacts">
+                    <div class="vacancies-modal__contacts-title form-vacancies__agreement">
+                        Отдел кадров
+                    </div>
+
+                    <div class="vacancies-modal__contacts-list">
+                        <div class="vacancies-modal__contacts-item">
+                            <a href="tel:78432926211" class="vacancies-modal__contacts-link">
+                                +7 (843) 292-62-11 (доп. 367)
+                            </a>
+                        </div>
+                        <div class="vacancies-modal__contacts-item">
+                            <a href="mailto:hr@neonart.ru" class="vacancies-modal__contacts-link">
+                                hr@neonart.ru
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="vacancies-modal__responde-btn">
+                Откликнуться
+            </button>
+
+            <button class="vacancies-modal__close-btn">
+                <svg aria-hidden="true" class="icon">
+                    <use xlink:href="#close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="vacancies-modal" id="vacancies-002">
     <div class="vacancies-modal__contianer">
         <div class="vacancies-modal__content">
             <div class="vacancies-modal__body">
