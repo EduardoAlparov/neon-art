@@ -168,4 +168,36 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    const vacanciesModals = Array.from(document.querySelectorAll('.vacancies-modal'));
+    vacanciesModals.forEach(element => {
+        const form = element.querySelector('form');
+        const formLayer = element.querySelector('.form-vacancies__body');
+        const successLayer = element.querySelector('.modal-contact-form__layer--success');
+        const backBtn = element.querySelector('.modal-contact-form__success-link');
+
+        form.addEventListener('submit', event => {
+            event.preventDefault();
+            if (
+                $(form)
+                    .parsley()
+                    .isValid()
+            ) {
+                form.reset();
+                $(form)
+                    .parsley()
+                    .reset();
+                formLayer.classList.remove('active');
+                successLayer.classList.add('active');
+            }
+        });
+
+        if (backBtn) {
+            backBtn.addEventListener('click', event => {
+                event.preventDefault();
+                formLayer.classList.add('active');
+                successLayer.classList.remove('active');
+            });
+        }
+    });
 });

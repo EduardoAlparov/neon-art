@@ -1389,9 +1389,6 @@
     }
   }
 
-  &__list {
-  }
-
   &__item {
     position: relative;
     padding-left: 2rem;
@@ -1491,6 +1488,17 @@
 }
 
 .form-vacancies {
+  position: relative;
+
+  .modal-contact-form__success {
+    min-height: 42rem;
+  }
+
+  &--main {
+    .modal-contact-form__success {
+      min-height: 61.2rem;
+    }
+  }
 
   .parsley-errors-list.filled {
     font-size: 1.2rem;
@@ -1640,6 +1648,10 @@
         font-size: 1.6rem;
       }
     }
+  }
+
+  &__layers {
+    position: relative;
   }
 }
 
