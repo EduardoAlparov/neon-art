@@ -154,9 +154,6 @@
     }
 }
 
-.intro__bg-image {
-}
-
 .intro__content {
     padding-top: calc(var(--header-height) + 3.5rem);
     padding-bottom: 9.5rem;
@@ -257,6 +254,8 @@ svg.intro__logo-image {
 }
 
 .intro__watch-project-wrapper {
+    display: flex;
+    gap: 3rem;
     margin-left: var(--sidebar-width, 0);
     margin-top: auto;
     overflow: hidden;
@@ -296,6 +295,20 @@ svg.intro__logo-image {
 
         .intro__watch-project-play::before {
             clip-path: inset(0 0 0 0);
+        }
+    }
+
+    &.intro_bg_mobile-main {
+        display: none;
+
+        @include breakpoint(mobile) {
+            display: inline-flex;
+        }
+    }
+
+    &.intro_bg_desc-main {
+        @include breakpoint(mobile) {
+            display: none;
         }
     }
 }
