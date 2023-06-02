@@ -457,9 +457,11 @@
     height: 5.2rem;
     margin-bottom: 2rem;
 
-    .icon {
+    img {
       max-width: 100%;
       max-height: 100%;
+      object-fit: contain;
+      object-position: center;
     }
 
     @include breakpoint(small-tablet) {
