@@ -901,11 +901,14 @@
   }
 
   &__slide-head {
-    width: calc(100% - 9rem);
-    margin-bottom: 1.6rem;
+    min-height: 10rem;
+    padding-bottom: 2rem;
+    padding-right: 10rem;
 
     @include breakpoint(small-tablet) {
-      width: calc(100% - 80px);
+      min-height: 70px;
+      padding-bottom: 20px;
+      padding-right: 70px;
     }
   }
 
@@ -920,6 +923,7 @@
   &__slide-desc {
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.6rem;
 
     span {
       margin-bottom: 2px;
@@ -938,7 +942,6 @@
   }
 
   &__slide-btn {
-    margin-bottom: 3.2rem;
 
     &.vacancies-modal__video-button {
       position: static;
@@ -958,10 +961,6 @@
       &:hover {
         background-color: var(--grey);
       }
-    }
-
-    @include breakpoint(small-tablet) {
-      margin-bottom: 24px;
     }
   }
 
